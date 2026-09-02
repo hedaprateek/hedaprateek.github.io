@@ -103,6 +103,13 @@
     margin-bottom:40px;
     border-bottom:1px solid var(--hairline);
   }
+  .masthead-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+  }
   .eyebrow{
     font-family:"IBM Plex Mono", ui-monospace, monospace;
     font-size:12.5px;
@@ -114,6 +121,23 @@
     gap:10px;
     flex-wrap:wrap;
   }
+  .share-btn{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    background:transparent;
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:6px 12px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .share-btn:hover{ border-color:var(--accent); color:var(--accent); }
+  .share-btn:disabled{ cursor:default; border-color:var(--accent); color:var(--accent); }
   .eyebrow .dot{
     width:6px; height:6px; border-radius:50%;
     background:var(--accent);
@@ -304,7 +328,10 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow"><span class="dot"></span> Prateek Heda <span>·</span> <a href="https://github.com/hedaprateek" target="_blank" rel="noopener">github.com/hedaprateek</a></p>
+    <div class="masthead-top">
+      <p class="eyebrow"><span class="dot"></span> Prateek Heda <span>·</span> <a href="https://github.com/hedaprateek" target="_blank" rel="noopener">github.com/hedaprateek</a></p>
+      <button type="button" class="share-btn" id="share-btn" aria-label="Share this page">Share ↗</button>
+    </div>
     <h1 class="title">The <span class="accent-word">Toolshed</span></h1>
     <p class="manifesto">Small, single-purpose tools, built one at a time and shipped. Most need <strong>nothing but a browser</strong> to run — no accounts, no server, often no build step at all.</p>
     <p class="legend">
@@ -326,6 +353,38 @@
 </div>
 
 <script>
+(function () {
+  var shareBtn = document.getElementById('share-btn');
+  if (!shareBtn) return;
+
+  shareBtn.addEventListener('click', async function () {
+    var shareData = {
+      title: 'The Toolshed — Prateek Heda',
+      text: 'Small, self-contained tools, built one at a time and shipped.',
+      url: location.href,
+    };
+
+    if (navigator.share) {
+      try { await navigator.share(shareData); } catch (e) { /* cancelled — ignore */ }
+      return;
+    }
+
+    var original = shareBtn.textContent;
+    try {
+      await navigator.clipboard.writeText(location.href);
+      shareBtn.textContent = 'Copied ✓';
+    } catch (e) {
+      window.prompt('Copy this link:', location.href);
+      return;
+    }
+    shareBtn.disabled = true;
+    setTimeout(function () {
+      shareBtn.textContent = original;
+      shareBtn.disabled = false;
+    }, 1600);
+  });
+})();
+
 (async function () {
   var grid = document.getElementById('grid');
   var colophon = document.getElementById('colophon-text');
