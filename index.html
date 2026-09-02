@@ -331,6 +331,7 @@
   }
   footer.colophon a{ color:inherit; border-bottom:1px solid var(--hairline); text-decoration:none; }
   footer.colophon a:hover{ color:var(--accent); border-color:var(--accent); }
+  .colophon-links{ display:flex; gap:18px; flex-wrap:wrap; }
 </style>
 </head>
 <body>
@@ -357,7 +358,10 @@
 
   <footer class="colophon">
     <span id="colophon-text">—</span>
-    <a href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+    <span class="colophon-links">
+      <a href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">New token ↗</a>
+    </span>
   </footer>
 
 </div>
