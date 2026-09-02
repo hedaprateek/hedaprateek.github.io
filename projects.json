@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-09-02T11:17:03Z",
+  "projects": [
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-09-02T10:50:04Z"
+    },
+    {
+      "name": "Society Directory",
+      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/People-Information",
+      "live": "https://hedaprateek.github.io/People-Information/",
+      "status": "live",
+      "pushedAt": "2026-09-02T10:40:54Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "pushedAt": "2026-09-02T10:13:46Z"
+    },
+    {
+      "name": "AuctionBook",
+      "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
+      "stack": "HTML · JS",
+      "repo": "https://github.com/hedaprateek/auction-booklet",
+      "live": "https://hedaprateek.github.io/auction-booklet/",
+      "status": "live",
+      "pushedAt": "2026-08-30T02:41:23Z"
+    },
+    {
+      "name": "Thread & Grain",
+      "description": "A brand site for a shirt label with the whole storefront already built in, kept switched off behind one flag until launch day.",
+      "stack": "HTML · JS",
+      "repo": "https://github.com/hedaprateek/shirt-store",
+      "live": "https://hedaprateek.github.io/shirt-store/",
+      "status": "live",
+      "pushedAt": "2026-08-27T04:29:03Z"
+    },
+    {
+      "name": "project-starter",
+      "description": "A one-command scaffold for new builds — ships with conventions, slash commands and permissions already written in, so a fresh session starts up to speed.",
+      "stack": "PowerShell · JS",
+      "repo": "https://github.com/hedaprateek/project-starter",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2026-08-25T16:55:03Z"
+    },
+    {
+      "name": "Event Helper",
+      "description": "Runs the show from the wings — run sheet, stage timer, live poll and projector slides, working even on bad venue wifi.",
+      "stack": "JS",
+      "repo": "https://github.com/hedaprateek/event-helper",
+      "live": "https://hedaprateek.github.io/event-helper/",
+      "status": "live",
+      "pushedAt": "2026-08-25T04:08:42Z"
+    },
+    {
+      "name": "Report Generator",
+      "description": "Turns raw data into a formatted, printable report.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/report-generator",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2026-08-23T05:47:25Z"
+    },
+    {
+      "name": "Life Events",
+      "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/Life-events",
+      "live": null,
+      "status": "local",
+      "pushedAt": "2026-08-18T12:15:00Z"
+    },
+    {
+      "name": "Campus to Corporate",
+      "description": "A ready-to-run two-day workshop for final-year students — session decks, facilitator guide and handouts behind one landing page.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/campus-to-corporate",
+      "live": "https://hedaprateek.github.io/campus-to-corporate/",
+      "status": "live",
+      "pushedAt": "2026-08-18T12:14:29Z"
+    },
+    {
+      "name": "Ticket Watcher",
+      "description": "Watches Indian Railways seat availability and alerts the moment a berth opens, so you never book too early or miss your seat.",
+      "stack": "React · Node · WS",
+      "repo": "https://github.com/hedaprateek/ticket-watcher",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2026-08-15T10:33:13Z"
+    },
+    {
+      "name": "OMR Generator",
+      "description": "Produces printable OMR bubble-sheets, laid out and ready to scan.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/OMR_generator",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2026-08-13T12:07:16Z"
+    },
+    {
+      "name": "webdriverIO Demo",
+      "description": "A handful of browser-automation tests, written while getting to grips with WebdriverIO.",
+      "stack": "WebdriverIO",
+      "repo": "https://github.com/hedaprateek/webdriverIO-Demo",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2024-07-24T11:19:31Z"
+    },
+    {
+      "name": "Warping Management",
+      "description": "An early React build — not documented yet.",
+      "stack": "React",
+      "repo": "https://github.com/hedaprateek/warping-management",
+      "live": null,
+      "status": "source",
+      "pushedAt": "2021-12-10T13:10:16Z"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Toolshed — Prateek Heda's Projects</title>
+<meta name="description" content="A catalog of small, self-contained tools and projects, with live demos and source links.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E7E9E0;
+    --surface:#FBFBF6;
+    --surface-2:#F1F2E9;
+    --ink:#1C231D;
+    --ink-dim:#55604F;
+    --ink-faint:#8A9182;
+    --grid:rgba(28,35,29,.05);
+    --hairline:rgba(28,35,29,.14);
+    --accent:#C97B15;
+    --accent-ink:#2B1B02;
+    --slate:#3E5A66;
+    --slate-ink:#EAF2F4;
+    --muted:#8A7B63;
+    --muted-ink:#FBF8F2;
+    --shadow:rgba(28,35,29,.10);
+    --focus:#2B6CB0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#13160F;
+      --surface:#1A1E14;
+      --surface-2:#20251A;
+      --ink:#ECEEE4;
+      --ink-dim:#AEB69F;
+      --ink-faint:#727C67;
+      --grid:rgba(236,238,228,.045);
+      --hairline:rgba(236,238,228,.16);
+      --accent:#E3A13B;
+      --accent-ink:#2B1B02;
+      --slate:#8FBAC9;
+      --slate-ink:#0B1A1F;
+      --muted:#B4A17C;
+      --muted-ink:#241D10;
+      --shadow:rgba(0,0,0,.45);
+      --focus:#7CB1E8;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#13160F;
+    --surface:#1A1E14;
+    --surface-2:#20251A;
+    --ink:#ECEEE4;
+    --ink-dim:#AEB69F;
+    --ink-faint:#727C67;
+    --grid:rgba(236,238,228,.045);
+    --hairline:rgba(236,238,228,.16);
+    --accent:#E3A13B;
+    --accent-ink:#2B1B02;
+    --slate:#8FBAC9;
+    --slate-ink:#0B1A1F;
+    --muted:#B4A17C;
+    --muted-ink:#241D10;
+    --shadow:rgba(0,0,0,.45);
+    --focus:#7CB1E8;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:32px 32px;
+    color:var(--ink);
+    font-family:"Public Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  a{ color:inherit; }
+  a:focus-visible, button:focus-visible{
+    outline:2.5px solid var(--focus);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:clamp(28px,6vw,72px) clamp(20px,5vw,48px) 64px;
+  }
+
+  /* ── Header ───────────────────────────── */
+  header.masthead{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    padding-bottom:34px;
+    margin-bottom:40px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .eyebrow .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+    display:inline-block;
+    flex:none;
+  }
+  .eyebrow a{
+    text-decoration:none;
+    border-bottom:1px solid var(--hairline);
+  }
+  .eyebrow a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  h1.title{
+    font-family:"Big Shoulders Display", ui-sans-serif, sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:clamp(48px, 9vw, 104px);
+    line-height:.88;
+    letter-spacing:.005em;
+    margin:0;
+    text-wrap:balance;
+  }
+  .title .accent-word{ color:var(--accent); }
+
+  .manifesto{
+    max-width:62ch;
+    font-size:clamp(15px,2.1vw,18px);
+    color:var(--ink-dim);
+    margin:0;
+  }
+  .manifesto strong{ color:var(--ink); font-weight:600; }
+
+  .legend{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-top:4px;
+  }
+  .legend span{ display:inline-flex; align-items:center; gap:7px; }
+  .legend i{
+    width:9px; height:9px; border-radius:2px; display:inline-block;
+    border:1.5px solid currentColor;
+  }
+  .legend i.fill-live{ background:var(--accent); border-color:var(--accent); }
+  .legend i.fill-local{ background:var(--slate); border-color:var(--slate); }
+  .legend i.fill-source{ background:var(--muted); border-color:var(--muted); }
+
+  /* ── Grid ───────────────────────────── */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(272px, 1fr));
+    gap:18px;
+  }
+  .loading{
+    grid-column:1/-1;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:13px;
+    color:var(--ink-dim);
+    margin:0;
+    padding:8px 0;
+  }
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--hairline);
+    border-radius:3px;
+    padding:20px 22px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    min-height:100%;
+    box-shadow:0 1px 0 var(--shadow);
+    transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    opacity:0;
+    transform:translateY(10px);
+    animation:rise .5s ease forwards;
+    animation-delay:calc(var(--i, 0) * 45ms);
+  }
+  .card:hover{
+    border-color:var(--accent);
+    transform:translateY(-3px);
+    box-shadow:0 10px 22px -12px var(--shadow);
+  }
+
+  @keyframes rise{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card{ animation:none; opacity:1; transform:none; }
+    .card:hover{ transform:none; }
+  }
+
+  .card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .tag{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:2px;
+    line-height:1.6;
+  }
+  .tag--live{ background:var(--accent); color:var(--accent-ink); }
+  .tag--local{ background:var(--slate); color:var(--slate-ink); }
+  .tag--source{ background:var(--muted); color:var(--muted-ink); }
+
+  .stack{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:11px;
+    color:var(--ink-faint);
+    text-align:right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .card-title{
+    font-family:"Big Shoulders Display", ui-sans-serif, sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:26px;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:.01em;
+    text-wrap:balance;
+  }
+
+  .card-desc{
+    margin:0;
+    color:var(--ink-dim);
+    font-size:14.5px;
+    line-height:1.5;
+    flex:1;
+  }
+
+  .card-links{
+    display:flex;
+    gap:16px;
+    padding-top:10px;
+    margin-top:2px;
+    border-top:1px dashed var(--hairline);
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:12.5px;
+    font-weight:500;
+  }
+  .link{
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    color:var(--ink-dim);
+    border-bottom:1px solid transparent;
+  }
+  .link:hover{ color:var(--accent); border-color:var(--accent); }
+  .link--primary{ color:var(--ink); font-weight:600; }
+  .link--primary:hover{ color:var(--accent); }
+
+  footer.colophon{
+    margin-top:56px;
+    padding-top:22px;
+    border-top:1px solid var(--hairline);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:11.5px;
+    color:var(--ink-faint);
+    letter-spacing:.03em;
+  }
+  footer.colophon a{ color:inherit; border-bottom:1px solid var(--hairline); text-decoration:none; }
+  footer.colophon a:hover{ color:var(--accent); border-color:var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow"><span class="dot"></span> Prateek Heda <span>·</span> <a href="https://github.com/hedaprateek" target="_blank" rel="noopener">github.com/hedaprateek</a></p>
+    <h1 class="title">The <span class="accent-word">Toolshed</span></h1>
+    <p class="manifesto">Small, single-purpose tools, built one at a time and shipped. Most need <strong>nothing but a browser</strong> to run — no accounts, no server, often no build step at all.</p>
+    <p class="legend">
+      <span><i class="fill-live"></i> Live — open and use it now</span>
+      <span><i class="fill-local"></i> Local — runs on your own machine</span>
+      <span><i class="fill-source"></i> Source — code only, browse the repo</span>
+    </p>
+  </header>
+
+  <main class="grid" id="grid" aria-live="polite">
+    <p class="loading">Loading projects…</p>
+  </main>
+
+  <footer class="colophon">
+    <span id="colophon-text">—</span>
+    <a href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+  </footer>
+
+</div>
+
+<script>
+(async function () {
+  var grid = document.getElementById('grid');
+  var colophon = document.getElementById('colophon-text');
+  var STATUS_LABEL = { live: 'Live', local: 'Local', source: 'Source' };
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function cardHTML(p, i) {
+    var label = STATUS_LABEL[p.status] || 'Source';
+    var links = (p.status === 'live' && p.live)
+      ? '<a class="link link--primary" href="' + p.live + '" target="_blank" rel="noopener">Open ↗</a>' +
+        '<a class="link" href="' + p.repo + '" target="_blank" rel="noopener">Source</a>'
+      : '<a class="link link--primary" href="' + p.repo + '" target="_blank" rel="noopener">Source ↗</a>';
+
+    return (
+      '<article class="card" style="--i:' + i + '">' +
+        '<div class="card-top"><span class="tag tag--' + p.status + '">' + label + '</span>' +
+          '<span class="stack">' + escapeHtml(p.stack || '') + '</span></div>' +
+        '<h2 class="card-title">' + escapeHtml(p.name) + '</h2>' +
+        '<p class="card-desc">' + escapeHtml(p.description) + '</p>' +
+        '<div class="card-links">' + links + '</div>' +
+      '</article>'
+    );
+  }
+
+  function formatDate(iso) {
+    try {
+      return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    } catch (e) {
+      return iso;
+    }
+  }
+
+  try {
+    var res = await fetch('./projects.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('projects.json ' + res.status);
+    var data = await res.json();
+    var projects = data.projects || [];
+
+    grid.innerHTML = projects.map(cardHTML).join('');
+    colophon.textContent = projects.length + ' project' + (projects.length === 1 ? '' : 's') +
+      ' · auto-updated ' + formatDate(data.generatedAt);
+  } catch (err) {
+    grid.innerHTML =
+      '<p class="loading">Couldn\'t load the project list right now — ' +
+      '<a class="link" href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">browse repositories directly ↗</a></p>';
+    colophon.textContent = 'load failed';
+    console.error(err);
+  }
+})();
+</script>
+
+</body>
+</html>

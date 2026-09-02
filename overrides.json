@@ -1,0 +1,78 @@
+{
+  "auction-booklet": {
+    "title": "AuctionBook",
+    "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
+    "stack": "HTML · JS"
+  },
+  "ipo-tracker": {
+    "title": "IPO Tracker",
+    "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+    "stack": "JS · GH Actions"
+  },
+  "People-Information": {
+    "title": "Society Directory",
+    "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
+    "stack": "JS · Excel"
+  },
+  "town-services": {
+    "title": "Local Services & Help",
+    "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+    "stack": "HTML"
+  },
+  "campus-to-corporate": {
+    "title": "Campus to Corporate",
+    "description": "A ready-to-run two-day workshop for final-year students — session decks, facilitator guide and handouts behind one landing page.",
+    "stack": "HTML"
+  },
+  "event-helper": {
+    "title": "Event Helper",
+    "description": "Runs the show from the wings — run sheet, stage timer, live poll and projector slides, working even on bad venue wifi.",
+    "stack": "JS"
+  },
+  "shirt-store": {
+    "title": "Thread & Grain",
+    "description": "A brand site for a shirt label with the whole storefront already built in, kept switched off behind one flag until launch day.",
+    "stack": "HTML · JS"
+  },
+  "Life-events": {
+    "title": "Life Events",
+    "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
+    "stack": "JS · Excel",
+    "status": "local"
+  },
+  "ticket-watcher": {
+    "title": "Ticket Watcher",
+    "description": "Watches Indian Railways seat availability and alerts the moment a berth opens, so you never book too early or miss your seat.",
+    "stack": "React · Node · WS",
+    "status": "source"
+  },
+  "project-starter": {
+    "description": "A one-command scaffold for new builds — ships with conventions, slash commands and permissions already written in, so a fresh session starts up to speed.",
+    "stack": "PowerShell · JS",
+    "status": "source"
+  },
+  "OMR_generator": {
+    "title": "OMR Generator",
+    "description": "Produces printable OMR bubble-sheets, laid out and ready to scan.",
+    "stack": "HTML",
+    "status": "source"
+  },
+  "report-generator": {
+    "title": "Report Generator",
+    "description": "Turns raw data into a formatted, printable report.",
+    "stack": "HTML",
+    "status": "source"
+  },
+  "webdriverIO-Demo": {
+    "title": "webdriverIO Demo",
+    "description": "A handful of browser-automation tests, written while getting to grips with WebdriverIO.",
+    "stack": "WebdriverIO",
+    "status": "source"
+  },
+  "warping-management": {
+    "title": "Warping Management",
+    "description": "An early React build — not documented yet.",
+    "stack": "React",
+    "status": "source"
+  }
+}
