@@ -305,6 +305,16 @@
   .link:hover{ color:var(--accent); border-color:var(--accent); }
   .link--primary{ color:var(--ink); font-weight:600; }
   .link--primary:hover{ color:var(--accent); }
+  button.link{
+    border:0;
+    background:none;
+    padding:0;
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    cursor:pointer;
+  }
+  button.link:disabled{ cursor:default; color:var(--accent); }
 
   footer.colophon{
     margin-top:56px;
@@ -353,35 +363,37 @@
 </div>
 
 <script>
+async function shareLink(url, title, text, btn) {
+  if (navigator.share) {
+    try { await navigator.share({ title: title, text: text, url: url }); } catch (e) { /* cancelled — ignore */ }
+    return;
+  }
+
+  var original = btn.textContent;
+  try {
+    await navigator.clipboard.writeText(url);
+    btn.textContent = 'Copied ✓';
+  } catch (e) {
+    window.prompt('Copy this link:', url);
+    return;
+  }
+  btn.disabled = true;
+  setTimeout(function () {
+    btn.textContent = original;
+    btn.disabled = false;
+  }, 1600);
+}
+
 (function () {
   var shareBtn = document.getElementById('share-btn');
   if (!shareBtn) return;
-
-  shareBtn.addEventListener('click', async function () {
-    var shareData = {
-      title: 'The Toolshed — Prateek Heda',
-      text: 'Small, self-contained tools, built one at a time and shipped.',
-      url: location.href,
-    };
-
-    if (navigator.share) {
-      try { await navigator.share(shareData); } catch (e) { /* cancelled — ignore */ }
-      return;
-    }
-
-    var original = shareBtn.textContent;
-    try {
-      await navigator.clipboard.writeText(location.href);
-      shareBtn.textContent = 'Copied ✓';
-    } catch (e) {
-      window.prompt('Copy this link:', location.href);
-      return;
-    }
-    shareBtn.disabled = true;
-    setTimeout(function () {
-      shareBtn.textContent = original;
-      shareBtn.disabled = false;
-    }, 1600);
+  shareBtn.addEventListener('click', function () {
+    shareLink(
+      location.href,
+      'The Toolshed — Prateek Heda',
+      'Small, self-contained tools, built one at a time and shipped.',
+      shareBtn
+    );
   });
 })();
 
@@ -389,6 +401,12 @@
   var grid = document.getElementById('grid');
   var colophon = document.getElementById('colophon-text');
   var STATUS_LABEL = { live: 'Live', local: 'Local', source: 'Source' };
+
+  grid.addEventListener('click', function (e) {
+    var btn = e.target.closest('.share-card-btn');
+    if (!btn) return;
+    shareLink(btn.dataset.url, btn.dataset.title, btn.dataset.desc, btn);
+  });
 
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, function (c) {
@@ -398,10 +416,16 @@
 
   function cardHTML(p, i) {
     var label = STATUS_LABEL[p.status] || 'Source';
+    var primaryUrl = (p.status === 'live' && p.live) ? p.live : p.repo;
     var links = (p.status === 'live' && p.live)
       ? '<a class="link link--primary" href="' + p.live + '" target="_blank" rel="noopener">Open ↗</a>' +
         '<a class="link" href="' + p.repo + '" target="_blank" rel="noopener">Source</a>'
       : '<a class="link link--primary" href="' + p.repo + '" target="_blank" rel="noopener">Source ↗</a>';
+    links +=
+      '<button type="button" class="link share-card-btn"' +
+        ' data-url="' + escapeHtml(primaryUrl) + '"' +
+        ' data-title="' + escapeHtml(p.name) + '"' +
+        ' data-desc="' + escapeHtml(p.description) + '">Share</button>';
 
     return (
       '<article class="card" style="--i:' + i + '">' +
