@@ -507,7 +507,7 @@ function cardHTML(p, i) {
 function downloadCardHTML(d, i) {
   var assets = (d.assets || []).map(function (a) {
     return (
-      '<a class="download-item" href="' + escapeHtml(a.url) + '" download>' +
+      '<a class="download-item" href="' + escapeHtml(a.url) + '" target="_blank" rel="noopener">' +
         '<span class="download-name">' + escapeHtml(a.name) + '</span>' +
         '<span class="download-meta">' + escapeHtml(a.size) + '</span>' +
       '</a>'
