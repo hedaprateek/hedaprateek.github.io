@@ -43,36 +43,30 @@
   "ticket-watcher": {
     "title": "Ticket Watcher",
     "description": "Watches Indian Railways seat availability and alerts the moment a berth opens, so you never book too early or miss your seat.",
-    "stack": "React · Node · WS",
-    "status": "source"
+    "stack": "React · Node · WS"
   },
   "project-starter": {
     "description": "A one-command scaffold for new builds — ships with conventions, slash commands and permissions already written in, so a fresh session starts up to speed.",
-    "stack": "PowerShell · JS",
-    "status": "source"
+    "stack": "PowerShell · JS"
   },
   "OMR_generator": {
     "title": "OMR Generator",
     "description": "Produces printable OMR bubble-sheets, laid out and ready to scan.",
-    "stack": "HTML",
-    "status": "source"
+    "stack": "HTML"
   },
   "report-generator": {
     "title": "Report Generator",
     "description": "Turns raw data into a formatted, printable report.",
-    "stack": "HTML",
-    "status": "source"
+    "stack": "HTML"
   },
   "webdriverIO-Demo": {
     "title": "webdriverIO Demo",
     "description": "A handful of browser-automation tests, written while getting to grips with WebdriverIO.",
-    "stack": "WebdriverIO",
-    "status": "source"
+    "stack": "WebdriverIO"
   },
   "warping-management": {
     "title": "Warping Management",
     "description": "An early React build — not documented yet.",
-    "stack": "React",
-    "status": "source"
+    "stack": "React"
   }
 }
