@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T11:27:40.115Z",
+  "generatedAt": "2026-09-03T11:40:18.281Z",
   "projects": [
     {
       "name": "Local Services & Help",
@@ -135,6 +135,29 @@
       "live": null,
       "status": "source",
       "pushedAt": "2021-12-10T13:10:16Z"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "Local Services & Help",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "version": "apk-v1",
+      "notes": "Apps — build 1",
+      "publishedAt": "2026-09-03T11:00:56Z",
+      "assets": [
+        {
+          "name": "Local-Services-v1.apk",
+          "size": "391 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v1/Local-Services-v1.apk",
+          "downloads": 1
+        },
+        {
+          "name": "Society-Directory-v1.apk",
+          "size": "366 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v1/Society-Directory-v1.apk",
+          "downloads": 1
+        }
+      ]
     }
   ]
 }
