@@ -34,13 +34,36 @@ entry to `overrides.json` keyed by the exact repo name:
 }
 ```
 
-Use `"status": "local"` for anything that's meant to run on someone's own machine
-rather than be hosted (no live demo will ever exist for it). Use `"status": "source"`
-to skip the live-page check for a repo you know is backend/full-stack and won't have
-a GitHub Pages demo.
+Use `"status": "local"` only for something that's genuinely never going to have a
+live page by design (e.g. it's meant to run on someone's own machine). Don't set
+`"status": "source"` as a way to skip the live-page check for a repo that's
+currently backend/full-stack — that disables live-detection for it *permanently*,
+so it'll stay marked "Source" even if you add a GitHub Pages demo for it later.
+Just leave `status` out and let auto-detection decide every run.
 
 Commit the change and push — the workflow also runs on any push that touches
 `overrides.json`, so the site picks it up within a minute or two.
+
+## Downloads
+
+Any repo with a published GitHub Release that has files attached shows up
+automatically in the Downloads section, with a button per asset. Nothing to
+configure — publish a Release with binaries on any repo and it appears on the
+next run. The section stays hidden entirely while no repo has any releases.
+
+## Getting the site to pick up changes right now
+
+The workflow runs once a day, or on push to `overrides.json` — but pushing to
+one of your *other* project repos doesn't trigger it, since Actions in this repo
+can't see activity in a different repo. Two ways to force an immediate refresh:
+
+- On GitHub: Actions tab → "Update project list" → **Run workflow**.
+- On the live site: the **Refresh** link in the footer. First click asks for a
+  GitHub token — create one at the "New token" link next to it, scoped to
+  **this repository only**, with **Actions: Read and write** permission. The
+  token is stored in your browser's `localStorage` only; it's never written to
+  a file or sent anywhere but `api.github.com`. The button re-runs the workflow
+  and reloads the page's data once it finishes (usually 20–40s).
 
 ## Running it locally
 

@@ -52,6 +52,42 @@ async function loadOverrides() {
   }
 }
 
+function formatBytes(bytes) {
+  if (!bytes) return '';
+  const units = ['B', 'KB', 'MB', 'GB'];
+  let n = bytes;
+  let i = 0;
+  while (n >= 1024 && i < units.length - 1) {
+    n /= 1024;
+    i++;
+  }
+  return `${n < 10 && i > 0 ? n.toFixed(1) : Math.round(n)} ${units[i]}`;
+}
+
+// Any repo with a published, non-draft release that has downloadable assets
+// attached becomes a Downloads entry — no manual step needed to list an app.
+async function fetchLatestRelease(repoName) {
+  const res = await fetch(
+    `https://api.github.com/repos/${USERNAME}/${repoName}/releases?per_page=1`,
+    { headers }
+  );
+  if (!res.ok) return null;
+  const [release] = await res.json();
+  if (!release || release.draft || !release.assets?.length) return null;
+
+  return {
+    version: release.tag_name,
+    notes: release.name || release.tag_name,
+    publishedAt: release.published_at,
+    assets: release.assets.map((a) => ({
+      name: a.name,
+      size: formatBytes(a.size),
+      url: a.browser_download_url,
+      downloads: a.download_count,
+    })),
+  };
+}
+
 async function buildProject(repo, overrides) {
   const o = overrides[repo.name] || {};
   if (o.hidden) return null;
@@ -64,7 +100,9 @@ async function buildProject(repo, overrides) {
     if (status === undefined) status = live ? 'live' : 'source';
   }
 
-  return {
+  const release = await fetchLatestRelease(repo.name);
+
+  const project = {
     name: o.title || repo.name,
     description: o.description || repo.description || 'No description yet — see the repo.',
     stack: o.stack || repo.language || '',
@@ -73,16 +111,33 @@ async function buildProject(repo, overrides) {
     status,
     pushedAt: repo.pushed_at,
   };
+
+  const download = release && {
+    name: o.title || repo.name,
+    repo: repo.html_url,
+    ...release,
+  };
+
+  return { project, download };
 }
 
 async function main() {
   const [repos, overrides] = await Promise.all([fetchAllRepos(), loadOverrides()]);
   const built = await Promise.all(repos.map((r) => buildProject(r, overrides)));
-  const projects = built.filter(Boolean).sort((a, b) => new Date(b.pushedAt) - new Date(a.pushedAt));
 
-  const data = { generatedAt: new Date().toISOString(), projects };
+  const projects = built
+    .filter(Boolean)
+    .map((b) => b.project)
+    .sort((a, b) => new Date(b.pushedAt) - new Date(a.pushedAt));
+
+  const downloads = built
+    .filter((b) => b && b.download)
+    .map((b) => b.download)
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+  const data = { generatedAt: new Date().toISOString(), projects, downloads };
   await writeFile(OUT_FILE, JSON.stringify(data, null, 2) + '\n');
-  console.log(`Wrote ${projects.length} projects to projects.json`);
+  console.log(`Wrote ${projects.length} projects and ${downloads.length} downloads to projects.json`);
 }
 
 main().catch((err) => {

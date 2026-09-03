@@ -331,7 +331,59 @@
   }
   footer.colophon a{ color:inherit; border-bottom:1px solid var(--hairline); text-decoration:none; }
   footer.colophon a:hover{ color:var(--accent); border-color:var(--accent); }
-  .colophon-links{ display:flex; gap:18px; flex-wrap:wrap; }
+  .colophon-links{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .colophon-links button.link{ color:inherit; }
+  .colophon-links button.link:hover{ color:var(--accent); }
+
+  /* ── Downloads ───────────────────────────── */
+  .downloads-section{
+    margin-top:48px;
+    padding-top:34px;
+    border-top:1px solid var(--hairline);
+  }
+  .section-heading{
+    font-family:"Big Shoulders Display", ui-sans-serif, sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:clamp(28px, 4vw, 40px);
+    line-height:1;
+    margin:0 0 6px;
+    letter-spacing:.01em;
+  }
+  .section-sub{
+    margin:0 0 22px;
+    color:var(--ink-dim);
+    font-size:14.5px;
+    max-width:56ch;
+  }
+  .tag--version{
+    background:transparent;
+    border:1px solid var(--hairline);
+    color:var(--ink-dim);
+  }
+  .download-list{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding-top:10px;
+    margin-top:2px;
+    border-top:1px dashed var(--hairline);
+  }
+  .download-item{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:10px;
+    text-decoration:none;
+    color:var(--ink-dim);
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:12.5px;
+    border-bottom:1px solid transparent;
+  }
+  .download-item:hover{ color:var(--accent); }
+  .download-name{ color:var(--ink); font-weight:600; }
+  .download-item:hover .download-name{ color:var(--accent); }
+  .download-meta{ flex:none; color:var(--ink-faint); white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -356,11 +408,18 @@
     <p class="loading">Loading projects…</p>
   </main>
 
+  <section class="downloads-section" id="downloads-section" hidden>
+    <h2 class="section-heading">Downloads</h2>
+    <p class="section-sub">Installable builds, pulled straight from each project's GitHub Releases.</p>
+    <div class="grid" id="downloads-grid"></div>
+  </section>
+
   <footer class="colophon">
     <span id="colophon-text">—</span>
     <span class="colophon-links">
       <a href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
       <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">New token ↗</a>
+      <button type="button" class="link" id="refresh-btn" aria-label="Pull the latest changes from GitHub now">Refresh ⟳</button>
     </span>
   </footer>
 
@@ -401,64 +460,92 @@ async function shareLink(url, title, text, btn) {
   });
 })();
 
-(async function () {
-  var grid = document.getElementById('grid');
-  var colophon = document.getElementById('colophon-text');
-  var STATUS_LABEL = { live: 'Live', local: 'Local', source: 'Source' };
+var grid = document.getElementById('grid');
+var downloadsSection = document.getElementById('downloads-section');
+var downloadsGrid = document.getElementById('downloads-grid');
+var colophon = document.getElementById('colophon-text');
+var STATUS_LABEL = { live: 'Live', local: 'Local', source: 'Source' };
 
-  grid.addEventListener('click', function (e) {
-    var btn = e.target.closest('.share-card-btn');
-    if (!btn) return;
-    shareLink(btn.dataset.url, btn.dataset.title, btn.dataset.desc, btn);
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
   });
+}
 
-  function escapeHtml(str) {
-    return String(str).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
+function formatDate(iso) {
+  try {
+    return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch (e) {
+    return iso;
   }
+}
 
-  function cardHTML(p, i) {
-    var label = STATUS_LABEL[p.status] || 'Source';
-    var primaryUrl = (p.status === 'live' && p.live) ? p.live : p.repo;
-    var links = (p.status === 'live' && p.live)
-      ? '<a class="link link--primary" href="' + p.live + '" target="_blank" rel="noopener">Open ↗</a>' +
-        '<a class="link" href="' + p.repo + '" target="_blank" rel="noopener">Source</a>'
-      : '<a class="link link--primary" href="' + p.repo + '" target="_blank" rel="noopener">Source ↗</a>';
-    links +=
-      '<button type="button" class="link share-card-btn"' +
-        ' data-url="' + escapeHtml(primaryUrl) + '"' +
-        ' data-title="' + escapeHtml(p.name) + '"' +
-        ' data-desc="' + escapeHtml(p.description) + '">Share</button>';
+function cardHTML(p, i) {
+  var label = STATUS_LABEL[p.status] || 'Source';
+  var primaryUrl = (p.status === 'live' && p.live) ? p.live : p.repo;
+  var links = (p.status === 'live' && p.live)
+    ? '<a class="link link--primary" href="' + p.live + '" target="_blank" rel="noopener">Open ↗</a>' +
+      '<a class="link" href="' + p.repo + '" target="_blank" rel="noopener">Source</a>'
+    : '<a class="link link--primary" href="' + p.repo + '" target="_blank" rel="noopener">Source ↗</a>';
+  links +=
+    '<button type="button" class="link share-card-btn"' +
+      ' data-url="' + escapeHtml(primaryUrl) + '"' +
+      ' data-title="' + escapeHtml(p.name) + '"' +
+      ' data-desc="' + escapeHtml(p.description) + '">Share</button>';
 
+  return (
+    '<article class="card" style="--i:' + i + '">' +
+      '<div class="card-top"><span class="tag tag--' + p.status + '">' + label + '</span>' +
+        '<span class="stack">' + escapeHtml(p.stack || '') + '</span></div>' +
+      '<h2 class="card-title">' + escapeHtml(p.name) + '</h2>' +
+      '<p class="card-desc">' + escapeHtml(p.description) + '</p>' +
+      '<div class="card-links">' + links + '</div>' +
+    '</article>'
+  );
+}
+
+function downloadCardHTML(d, i) {
+  var assets = (d.assets || []).map(function (a) {
     return (
-      '<article class="card" style="--i:' + i + '">' +
-        '<div class="card-top"><span class="tag tag--' + p.status + '">' + label + '</span>' +
-          '<span class="stack">' + escapeHtml(p.stack || '') + '</span></div>' +
-        '<h2 class="card-title">' + escapeHtml(p.name) + '</h2>' +
-        '<p class="card-desc">' + escapeHtml(p.description) + '</p>' +
-        '<div class="card-links">' + links + '</div>' +
-      '</article>'
+      '<a class="download-item" href="' + escapeHtml(a.url) + '" download>' +
+        '<span class="download-name">' + escapeHtml(a.name) + '</span>' +
+        '<span class="download-meta">' + escapeHtml(a.size) + '</span>' +
+      '</a>'
     );
-  }
+  }).join('');
 
-  function formatDate(iso) {
-    try {
-      return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
-    } catch (e) {
-      return iso;
-    }
-  }
+  return (
+    '<article class="card" style="--i:' + i + '">' +
+      '<div class="card-top"><span class="tag tag--version">' + escapeHtml(d.version) + '</span>' +
+        '<span class="stack">' + formatDate(d.publishedAt) + '</span></div>' +
+      '<h2 class="card-title">' + escapeHtml(d.name) + '</h2>' +
+      '<p class="card-desc">' + escapeHtml(d.notes) + '</p>' +
+      '<div class="download-list">' + assets + '</div>' +
+      '<div class="card-links">' +
+        '<a class="link" href="' + escapeHtml(d.repo) + '" target="_blank" rel="noopener">Source</a>' +
+      '</div>' +
+    '</article>'
+  );
+}
 
+async function loadProjects() {
   try {
     var res = await fetch('./projects.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('projects.json ' + res.status);
     var data = await res.json();
     var projects = data.projects || [];
+    var downloads = data.downloads || [];
 
     grid.innerHTML = projects.map(cardHTML).join('');
     colophon.textContent = projects.length + ' project' + (projects.length === 1 ? '' : 's') +
       ' · auto-updated ' + formatDate(data.generatedAt);
+
+    if (downloads.length) {
+      downloadsGrid.innerHTML = downloads.map(downloadCardHTML).join('');
+      downloadsSection.hidden = false;
+    } else {
+      downloadsSection.hidden = true;
+    }
   } catch (err) {
     grid.innerHTML =
       '<p class="loading">Couldn\'t load the project list right now — ' +
@@ -466,6 +553,121 @@ async function shareLink(url, title, text, btn) {
     colophon.textContent = 'load failed';
     console.error(err);
   }
+}
+
+grid.addEventListener('click', function (e) {
+  var btn = e.target.closest('.share-card-btn');
+  if (!btn) return;
+  shareLink(btn.dataset.url, btn.dataset.title, btn.dataset.desc, btn);
+});
+
+loadProjects();
+
+(function () {
+  var TOKEN_KEY = 'toolshed_gh_token';
+  var REPO = 'hedaprateek/hedaprateek.github.io';
+  var refreshBtn = document.getElementById('refresh-btn');
+  if (!refreshBtn) return;
+
+  function getToken() {
+    try { return localStorage.getItem(TOKEN_KEY); } catch (e) { return null; }
+  }
+  function setToken(t) {
+    try { localStorage.setItem(TOKEN_KEY, t); } catch (e) {}
+  }
+  function clearToken() {
+    try { localStorage.removeItem(TOKEN_KEY); } catch (e) {}
+  }
+
+  function ghApi(path, token, opts) {
+    return fetch('https://api.github.com' + path, Object.assign({
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: 'Bearer ' + token,
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+    }, opts));
+  }
+
+  function sleep(ms) {
+    return new Promise(function (r) { setTimeout(r, ms); });
+  }
+
+  // Polls the workflow's recent runs until the one triggered after `since`
+  // finishes. Returns true/false on success/failure, or null if it times out.
+  async function waitForRun(token, since) {
+    for (var i = 0; i < 10; i++) {
+      await sleep(3000);
+      try {
+        var res = await ghApi('/repos/' + REPO + '/actions/workflows/update-projects.yml/runs?per_page=1', token);
+        if (!res.ok) continue;
+        var data = await res.json();
+        var run = data.workflow_runs && data.workflow_runs[0];
+        if (run && new Date(run.created_at) >= since && run.status === 'completed') {
+          return run.conclusion === 'success';
+        }
+      } catch (e) { /* keep polling */ }
+    }
+    return null;
+  }
+
+  function setBtnState(text, ms) {
+    refreshBtn.textContent = text;
+    if (ms) {
+      setTimeout(function () {
+        refreshBtn.textContent = 'Refresh ⟳';
+        refreshBtn.disabled = false;
+      }, ms);
+    }
+  }
+
+  refreshBtn.addEventListener('click', async function () {
+    var token = getToken();
+    if (!token) {
+      token = window.prompt(
+        'Paste a GitHub token with "Actions: Read and write" on hedaprateek.github.io.\n' +
+        'Kept only in this browser — never sent anywhere but api.github.com.'
+      );
+      if (!token) return;
+      setToken(token);
+    }
+
+    refreshBtn.disabled = true;
+    refreshBtn.textContent = 'Refreshing…';
+    var since = new Date();
+
+    var dispatchRes;
+    try {
+      dispatchRes = await ghApi(
+        '/repos/' + REPO + '/actions/workflows/update-projects.yml/dispatches',
+        token,
+        { method: 'POST', body: JSON.stringify({ ref: 'main' }) }
+      );
+    } catch (e) {
+      setBtnState('Network error ✕', 2200);
+      return;
+    }
+
+    if (dispatchRes.status === 401 || dispatchRes.status === 403) {
+      clearToken();
+      setBtnState('Bad token ✕', 2200);
+      return;
+    }
+    if (!dispatchRes.ok) {
+      setBtnState('Failed ✕', 2200);
+      return;
+    }
+
+    var ok = await waitForRun(token, since);
+    if (ok === true) {
+      await loadProjects();
+      setBtnState('Updated ✓', 1800);
+    } else if (ok === false) {
+      setBtnState('Run failed ✕', 2200);
+    } else {
+      setBtnState('Still running…', 2200);
+    }
+  });
 })();
 </script>
 
