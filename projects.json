@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-09-03T08:05:08.649Z",
+  "generatedAt": "2026-09-03T08:51:00.080Z",
   "projects": [
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-09-03T08:14:27Z"
+    },
+    {
+      "name": "Report Generator",
+      "description": "Turns raw data into a formatted, printable report.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/report-generator",
+      "live": "https://hedaprateek.github.io/report-generator/",
+      "status": "live",
+      "pushedAt": "2026-09-03T08:05:41Z"
+    },
     {
       "name": "Society Directory",
       "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
@@ -18,15 +36,6 @@
       "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
       "pushedAt": "2026-09-03T07:34:13Z"
-    },
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "pushedAt": "2026-09-03T06:33:26Z"
     },
     {
       "name": "AuctionBook",
@@ -63,15 +72,6 @@
       "live": "https://hedaprateek.github.io/event-helper/",
       "status": "live",
       "pushedAt": "2026-08-25T04:08:42Z"
-    },
-    {
-      "name": "Report Generator",
-      "description": "Turns raw data into a formatted, printable report.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/report-generator",
-      "live": null,
-      "status": "source",
-      "pushedAt": "2026-08-23T05:47:25Z"
     },
     {
       "name": "Life Events",
