@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-09-03T08:51:00.080Z",
+  "generatedAt": "2026-09-03T11:27:40.115Z",
   "projects": [
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "pushedAt": "2026-09-03T11:00:56Z"
+    },
+    {
+      "name": "tinted-nails",
+      "description": "Tinted Nails — hand-painted press-on nail studio. Single-file static site.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/tinted-nails",
+      "live": "https://hedaprateek.github.io/tinted-nails/",
+      "status": "live",
+      "pushedAt": "2026-09-03T10:59:42Z"
+    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -27,15 +45,6 @@
       "live": "https://hedaprateek.github.io/People-Information/",
       "status": "live",
       "pushedAt": "2026-09-03T07:55:35Z"
-    },
-    {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
-      "status": "live",
-      "pushedAt": "2026-09-03T07:34:13Z"
     },
     {
       "name": "AuctionBook",
