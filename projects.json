@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-03T11:40:18.281Z",
+  "generatedAt": "2026-09-04T08:00:08.313Z",
   "projects": [
     {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
+      "name": "jee-neet-tips",
+      "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/jee-neet-tips",
+      "live": "https://hedaprateek.github.io/jee-neet-tips/",
       "status": "live",
-      "pushedAt": "2026-09-03T11:00:56Z"
+      "pushedAt": "2026-09-04T07:23:18Z"
     },
     {
       "name": "tinted-nails",
@@ -17,7 +17,7 @@
       "repo": "https://github.com/hedaprateek/tinted-nails",
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
-      "pushedAt": "2026-09-03T10:59:42Z"
+      "pushedAt": "2026-09-04T05:50:14Z"
     },
     {
       "name": "IPO Tracker",
@@ -26,7 +26,16 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-03T08:14:27Z"
+      "pushedAt": "2026-09-04T04:57:06Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "pushedAt": "2026-09-03T11:00:56Z"
     },
     {
       "name": "Report Generator",
