@@ -1,6 +1,33 @@
 {
-  "generatedAt": "2026-09-04T08:00:08.313Z",
+  "generatedAt": "2026-09-05T07:41:38.685Z",
   "projects": [
+    {
+      "name": "heirloom-family-tree",
+      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
+      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
+      "status": "live",
+      "pushedAt": "2026-09-05T05:20:09Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-09-05T04:50:57Z"
+    },
+    {
+      "name": "Society Directory",
+      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/People-Information",
+      "live": "https://hedaprateek.github.io/People-Information/",
+      "status": "live",
+      "pushedAt": "2026-09-04T16:29:17Z"
+    },
     {
       "name": "jee-neet-tips",
       "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
@@ -8,7 +35,7 @@
       "repo": "https://github.com/hedaprateek/jee-neet-tips",
       "live": "https://hedaprateek.github.io/jee-neet-tips/",
       "status": "live",
-      "pushedAt": "2026-09-04T07:23:18Z"
+      "pushedAt": "2026-09-04T11:18:11Z"
     },
     {
       "name": "tinted-nails",
@@ -18,15 +45,6 @@
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
       "pushedAt": "2026-09-04T05:50:14Z"
-    },
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "pushedAt": "2026-09-04T04:57:06Z"
     },
     {
       "name": "Local Services & Help",
@@ -45,15 +63,6 @@
       "live": "https://hedaprateek.github.io/report-generator/",
       "status": "live",
       "pushedAt": "2026-09-03T08:05:41Z"
-    },
-    {
-      "name": "Society Directory",
-      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
-      "stack": "JS · Excel",
-      "repo": "https://github.com/hedaprateek/People-Information",
-      "live": "https://hedaprateek.github.io/People-Information/",
-      "status": "live",
-      "pushedAt": "2026-09-03T07:55:35Z"
     },
     {
       "name": "AuctionBook",
