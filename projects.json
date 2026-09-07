@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-09-07T06:59:38.421Z",
+  "generatedAt": "2026-09-07T08:20:57.695Z",
   "projects": [
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "pushedAt": "2026-09-07T06:59:39Z"
+    },
+    {
+      "name": "wa-number-extractor",
+      "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/wa-number-extractor",
+      "live": "https://hedaprateek.github.io/wa-number-extractor/",
+      "status": "live",
+      "pushedAt": "2026-09-07T06:58:20Z"
+    },
     {
       "name": "heirloom-family-tree",
       "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
