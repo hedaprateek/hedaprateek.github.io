@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-07T08:20:57.695Z",
+  "generatedAt": "2026-09-08T08:07:05.392Z",
   "projects": [
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-09-08T06:20:13Z"
+    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -8,7 +17,16 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-09-07T06:59:39Z"
+      "pushedAt": "2026-09-08T05:13:34Z"
+    },
+    {
+      "name": "Report Generator",
+      "description": "Turns raw data into a formatted, printable report.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/report-generator",
+      "live": "https://hedaprateek.github.io/report-generator/",
+      "status": "live",
+      "pushedAt": "2026-09-07T12:54:13Z"
     },
     {
       "name": "wa-number-extractor",
@@ -17,7 +35,7 @@
       "repo": "https://github.com/hedaprateek/wa-number-extractor",
       "live": "https://hedaprateek.github.io/wa-number-extractor/",
       "status": "live",
-      "pushedAt": "2026-09-07T06:58:20Z"
+      "pushedAt": "2026-09-07T12:22:28Z"
     },
     {
       "name": "heirloom-family-tree",
@@ -27,15 +45,6 @@
       "live": "https://hedaprateek.github.io/heirloom-family-tree/",
       "status": "live",
       "pushedAt": "2026-09-07T05:50:42Z"
-    },
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "pushedAt": "2026-09-07T05:46:18Z"
     },
     {
       "name": "reel-audio",
@@ -81,15 +90,6 @@
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
       "pushedAt": "2026-09-04T05:50:14Z"
-    },
-    {
-      "name": "Report Generator",
-      "description": "Turns raw data into a formatted, printable report.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/report-generator",
-      "live": "https://hedaprateek.github.io/report-generator/",
-      "status": "live",
-      "pushedAt": "2026-09-03T08:05:41Z"
     },
     {
       "name": "AuctionBook",
