@@ -1,15 +1,6 @@
 {
-  "generatedAt": "2026-09-09T08:11:00.868Z",
+  "generatedAt": "2026-09-10T08:10:18.514Z",
   "projects": [
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "pushedAt": "2026-09-09T05:14:55Z"
-    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -17,7 +8,43 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-09T05:03:43Z"
+      "pushedAt": "2026-09-10T06:25:34Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "pushedAt": "2026-09-10T05:15:26Z"
+    },
+    {
+      "name": "pardarshi",
+      "description": "A demonstration of end-to-end public fund transparency for India: every rupee traced from taxpayer to last mile, with acknowledgements, a 1% deviation rule, and public show-cause notices. All data synthetic.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/pardarshi",
+      "live": "https://hedaprateek.github.io/pardarshi/",
+      "status": "live",
+      "pushedAt": "2026-09-09T19:40:30Z"
+    },
+    {
+      "name": "cctv-services-site",
+      "description": "Single-page website for a CCTV installation, electrical fitting and computer service business",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/cctv-services-site",
+      "live": "https://hedaprateek.github.io/cctv-services-site/",
+      "status": "live",
+      "pushedAt": "2026-09-09T19:37:03Z"
+    },
+    {
+      "name": "heirloom-family-tree",
+      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
+      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
+      "status": "live",
+      "pushedAt": "2026-09-09T19:05:52Z"
     },
     {
       "name": "Report Generator",
@@ -36,15 +63,6 @@
       "live": "https://hedaprateek.github.io/wa-number-extractor/",
       "status": "live",
       "pushedAt": "2026-09-07T12:22:28Z"
-    },
-    {
-      "name": "heirloom-family-tree",
-      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
-      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
-      "status": "live",
-      "pushedAt": "2026-09-07T05:50:42Z"
     },
     {
       "name": "reel-audio",
