@@ -385,6 +385,55 @@
   .download-item:hover .download-name{ color:var(--accent); }
   .download-meta{ flex:none; color:var(--ink-faint); white-space:nowrap; }
 </style>
+
+<!-- ═══ Stunity Tech — studio credit (screen + print) ═══════════════════
+     Quiet on screen, set apart from the site's own footer text. In print it
+     becomes a running footer: fixed to the page box so it repeats on every
+     sheet, with @page reserving the space so it never lands on the copy.
+     Colour tokens fall back gracefully on sites that don't define them. -->
+<style>
+.stunity-credit{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin:26px auto 34px;padding:20px 16px 0;max-width:1180px;
+  border-top:1px solid var(--line-soft,rgba(128,128,128,.22));
+  font-family:var(--mono,ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace);
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;line-height:1.5;
+  color:var(--muted,#6b7280);
+}
+.stunity-credit .sc-dot{width:6px;height:6px;border-radius:50%;flex:none;
+  background:var(--shade,currentColor);opacity:.75}
+.stunity-credit b{font-weight:500;color:var(--ink,inherit)}
+.stunity-credit[data-print-only]{display:none}
+.sc-link{
+  position:relative;margin-left:4px;padding-left:17px;
+  text-transform:none;letter-spacing:.02em;white-space:nowrap;
+  color:inherit;text-decoration:none;opacity:.78;
+  border-bottom:1px solid transparent;
+  transition:opacity .18s ease,border-color .18s ease;
+}
+.sc-link::before{content:"";position:absolute;left:0;top:50%;
+  width:9px;height:1px;background:currentColor;opacity:.5}
+.sc-link:hover{opacity:1;border-bottom-color:currentColor}
+.sc-link:focus-visible{outline:1px solid currentColor;outline-offset:3px;
+  border-radius:2px;opacity:1}
+@media (max-width:460px){
+  .sc-link{white-space:normal;margin-left:0;padding-left:0}
+  .sc-link::before{display:none}
+}
+@media print{ .sc-link{display:none!important} }
+@media print{
+  @page{margin-bottom:24mm}
+  html body #stunityCredit.stunity-credit,html body #stunityCredit.stunity-credit[data-print-only]{
+    display:flex!important;position:fixed;left:0;right:0;bottom:-16mm;
+    margin:0;padding:3mm 0 0;max-width:none;
+    border-top:.2mm solid #c9c9c9;background:#fff;color:#5b5b5b;
+    font-size:7.5pt;letter-spacing:.14em;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  .stunity-credit b{color:#111}
+  .stunity-credit .sc-dot{background:#8a8a8a}
+}
+</style>
 </head>
 <body>
 
@@ -671,5 +720,7 @@ loadProjects();
 })();
 </script>
 
+
+<div class="stunity-credit" id="stunityCredit"><span class="sc-dot"></span><span>Stunity Tech — by <b>Prateek</b></span><a class="sc-link" href="https://stunity-tech.hedaprateek.workers.dev" target="_blank" rel="noopener">stunity-tech.hedaprateek.workers.dev</a></div>
 </body>
 </html>
