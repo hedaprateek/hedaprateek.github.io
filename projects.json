@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-12T07:57:04.530Z",
+  "generatedAt": "2026-09-13T08:20:54.315Z",
   "projects": [
     {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "name": "photo-print-layout",
+      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/photo-print-layout",
+      "live": "https://hedaprateek.github.io/photo-print-layout/",
       "status": "live",
-      "pushedAt": "2026-09-12T05:00:22Z"
+      "pushedAt": "2026-09-13T08:20:28Z"
     },
     {
       "name": "IPO Tracker",
@@ -17,34 +17,16 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-12T04:56:05Z"
+      "pushedAt": "2026-09-13T06:36:33Z"
     },
     {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
       "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-09-12T04:17:40Z"
-    },
-    {
-      "name": "wa-number-extractor",
-      "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/wa-number-extractor",
-      "live": "https://hedaprateek.github.io/wa-number-extractor/",
-      "status": "live",
-      "pushedAt": "2026-09-12T04:16:21Z"
-    },
-    {
-      "name": "tinted-nails",
-      "description": "Tinted Nails — hand-painted press-on nail studio. Single-file static site.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/tinted-nails",
-      "live": "https://hedaprateek.github.io/tinted-nails/",
-      "status": "live",
-      "pushedAt": "2026-09-12T04:16:14Z"
+      "pushedAt": "2026-09-13T05:21:17Z"
     },
     {
       "name": "jee-neet-tips",
@@ -53,25 +35,34 @@
       "repo": "https://github.com/hedaprateek/jee-neet-tips",
       "live": "https://hedaprateek.github.io/jee-neet-tips/",
       "status": "live",
-      "pushedAt": "2026-09-12T04:16:02Z"
+      "pushedAt": "2026-09-12T13:20:48Z"
     },
     {
-      "name": "heirloom-family-tree",
-      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
-      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
-      "status": "live",
-      "pushedAt": "2026-09-11T17:15:02Z"
-    },
-    {
-      "name": "Life Events",
-      "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
+      "name": "Society Directory",
+      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
       "stack": "JS · Excel",
-      "repo": "https://github.com/hedaprateek/Life-events",
-      "live": null,
-      "status": "local",
-      "pushedAt": "2026-09-11T17:14:46Z"
+      "repo": "https://github.com/hedaprateek/People-Information",
+      "live": "https://hedaprateek.github.io/People-Information/",
+      "status": "live",
+      "pushedAt": "2026-09-12T12:29:48Z"
+    },
+    {
+      "name": "tinted-nails",
+      "description": "Tinted Nails — hand-painted press-on nail studio. Single-file static site.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/tinted-nails",
+      "live": "https://hedaprateek.github.io/tinted-nails/",
+      "status": "live",
+      "pushedAt": "2026-09-12T11:18:05Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "pushedAt": "2026-09-12T10:48:45Z"
     },
     {
       "name": "AuctionBook",
@@ -80,7 +71,34 @@
       "repo": "https://github.com/hedaprateek/auction-booklet",
       "live": "https://hedaprateek.github.io/auction-booklet/",
       "status": "live",
-      "pushedAt": "2026-09-11T17:14:43Z"
+      "pushedAt": "2026-09-12T10:47:47Z"
+    },
+    {
+      "name": "heirloom-family-tree",
+      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
+      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
+      "status": "live",
+      "pushedAt": "2026-09-12T10:47:43Z"
+    },
+    {
+      "name": "wa-number-extractor",
+      "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/wa-number-extractor",
+      "live": "https://hedaprateek.github.io/wa-number-extractor/",
+      "status": "live",
+      "pushedAt": "2026-09-12T10:47:26Z"
+    },
+    {
+      "name": "Life Events",
+      "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/Life-events",
+      "live": null,
+      "status": "local",
+      "pushedAt": "2026-09-12T10:47:22Z"
     },
     {
       "name": "stunity-tech",
@@ -213,21 +231,21 @@
     {
       "name": "Local Services & Help",
       "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v2",
-      "notes": "Apps — build 2",
-      "publishedAt": "2026-09-12T04:17:40Z",
+      "version": "apk-v3",
+      "notes": "Apps — build 3",
+      "publishedAt": "2026-09-12T10:48:46Z",
       "assets": [
         {
-          "name": "Local-Services-v2.apk",
+          "name": "Local-Services-v3.apk",
           "size": "398 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v2/Local-Services-v2.apk",
-          "downloads": 1
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v3/Local-Services-v3.apk",
+          "downloads": 3
         },
         {
-          "name": "Society-Directory-v2.apk",
+          "name": "Society-Directory-v3.apk",
           "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v2/Society-Directory-v2.apk",
-          "downloads": 1
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v3/Society-Directory-v3.apk",
+          "downloads": 3
         }
       ]
     }
