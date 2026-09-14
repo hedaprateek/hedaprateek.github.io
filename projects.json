@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-13T08:20:54.315Z",
+  "generatedAt": "2026-09-14T08:58:07.731Z",
   "projects": [
     {
-      "name": "photo-print-layout",
-      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/photo-print-layout",
-      "live": "https://hedaprateek.github.io/photo-print-layout/",
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-09-13T08:20:28Z"
+      "pushedAt": "2026-09-14T05:26:08Z"
     },
     {
       "name": "IPO Tracker",
@@ -17,34 +17,7 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-13T06:36:33Z"
-    },
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "pushedAt": "2026-09-13T05:21:17Z"
-    },
-    {
-      "name": "jee-neet-tips",
-      "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/jee-neet-tips",
-      "live": "https://hedaprateek.github.io/jee-neet-tips/",
-      "status": "live",
-      "pushedAt": "2026-09-12T13:20:48Z"
-    },
-    {
-      "name": "Society Directory",
-      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
-      "stack": "JS · Excel",
-      "repo": "https://github.com/hedaprateek/People-Information",
-      "live": "https://hedaprateek.github.io/People-Information/",
-      "status": "live",
-      "pushedAt": "2026-09-12T12:29:48Z"
+      "pushedAt": "2026-09-14T03:56:59Z"
     },
     {
       "name": "tinted-nails",
@@ -53,7 +26,25 @@
       "repo": "https://github.com/hedaprateek/tinted-nails",
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
-      "pushedAt": "2026-09-12T11:18:05Z"
+      "pushedAt": "2026-09-13T19:39:28Z"
+    },
+    {
+      "name": "photo-print-layout",
+      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/photo-print-layout",
+      "live": "https://hedaprateek.github.io/photo-print-layout/",
+      "status": "live",
+      "pushedAt": "2026-09-13T19:19:42Z"
+    },
+    {
+      "name": "cctv-services-site",
+      "description": "Single-page website for a CCTV installation, electrical fitting and computer service business",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/cctv-services-site",
+      "live": "https://hedaprateek.github.io/cctv-services-site/",
+      "status": "live",
+      "pushedAt": "2026-09-13T17:09:24Z"
     },
     {
       "name": "Local Services & Help",
@@ -62,7 +53,7 @@
       "repo": "https://github.com/hedaprateek/town-services",
       "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
-      "pushedAt": "2026-09-12T10:48:45Z"
+      "pushedAt": "2026-09-13T16:43:33Z"
     },
     {
       "name": "AuctionBook",
@@ -71,7 +62,7 @@
       "repo": "https://github.com/hedaprateek/auction-booklet",
       "live": "https://hedaprateek.github.io/auction-booklet/",
       "status": "live",
-      "pushedAt": "2026-09-12T10:47:47Z"
+      "pushedAt": "2026-09-13T16:42:29Z"
     },
     {
       "name": "heirloom-family-tree",
@@ -80,7 +71,25 @@
       "repo": "https://github.com/hedaprateek/heirloom-family-tree",
       "live": "https://hedaprateek.github.io/heirloom-family-tree/",
       "status": "live",
-      "pushedAt": "2026-09-12T10:47:43Z"
+      "pushedAt": "2026-09-13T16:42:25Z"
+    },
+    {
+      "name": "Society Directory",
+      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/People-Information",
+      "live": "https://hedaprateek.github.io/People-Information/",
+      "status": "live",
+      "pushedAt": "2026-09-13T16:42:20Z"
+    },
+    {
+      "name": "jee-neet-tips",
+      "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/jee-neet-tips",
+      "live": "https://hedaprateek.github.io/jee-neet-tips/",
+      "status": "live",
+      "pushedAt": "2026-09-13T16:41:32Z"
     },
     {
       "name": "wa-number-extractor",
@@ -89,7 +98,7 @@
       "repo": "https://github.com/hedaprateek/wa-number-extractor",
       "live": "https://hedaprateek.github.io/wa-number-extractor/",
       "status": "live",
-      "pushedAt": "2026-09-12T10:47:26Z"
+      "pushedAt": "2026-09-13T16:41:28Z"
     },
     {
       "name": "Life Events",
@@ -98,7 +107,7 @@
       "repo": "https://github.com/hedaprateek/Life-events",
       "live": null,
       "status": "local",
-      "pushedAt": "2026-09-12T10:47:22Z"
+      "pushedAt": "2026-09-13T16:41:23Z"
     },
     {
       "name": "stunity-tech",
@@ -108,15 +117,6 @@
       "live": "https://hedaprateek.github.io/stunity-tech/",
       "status": "live",
       "pushedAt": "2026-09-11T17:13:24Z"
-    },
-    {
-      "name": "cctv-services-site",
-      "description": "Single-page website for a CCTV installation, electrical fitting and computer service business",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/cctv-services-site",
-      "live": "https://hedaprateek.github.io/cctv-services-site/",
-      "status": "live",
-      "pushedAt": "2026-09-11T10:45:30Z"
     },
     {
       "name": "solar-website",
@@ -231,21 +231,21 @@
     {
       "name": "Local Services & Help",
       "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v3",
-      "notes": "Apps — build 3",
-      "publishedAt": "2026-09-12T10:48:46Z",
+      "version": "apk-v4",
+      "notes": "Apps — build 4",
+      "publishedAt": "2026-09-13T16:43:33Z",
       "assets": [
         {
-          "name": "Local-Services-v3.apk",
-          "size": "398 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v3/Local-Services-v3.apk",
-          "downloads": 3
+          "name": "Local-Services-v4.apk",
+          "size": "400 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v4/Local-Services-v4.apk",
+          "downloads": 1
         },
         {
-          "name": "Society-Directory-v3.apk",
+          "name": "Society-Directory-v4.apk",
           "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v3/Society-Directory-v3.apk",
-          "downloads": 3
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v4/Society-Directory-v4.apk",
+          "downloads": 1
         }
       ]
     }
