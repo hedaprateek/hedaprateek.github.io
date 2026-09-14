@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not here — The Toolshed</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14150F">
+<!--
+  GitHub Pages serves this file for any unmatched path on the whole origin,
+  so it has to stand on its own: no shared stylesheet, no script, no fonts
+  that might not load. Every project below is a real, live link.
+-->
+<style>
+  :root{
+    --bg:#14150F; --ink:#EDE8DC; --ink-2:#B9B4A8; --ink-3:#7D7A70;
+    --line:rgba(237,232,220,.14); --accent:#E0A04A;
+    --mono:ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:light){
+    :root:not([data-theme="dark"]){
+      --bg:#F7F5EF; --ink:#1B1C16; --ink-2:#4A4A42; --ink-3:#7D7A70;
+      --line:rgba(27,28,22,.16); --accent:#A86E1E;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+    font:16px/1.6 var(--mono);
+    display:flex;align-items:center;justify-content:center;padding:32px 20px;
+  }
+  .card{width:100%;max-width:620px}
+  .code{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:22px;display:flex;gap:10px;align-items:center;
+  }
+  .code::after{content:"";flex:1;height:1px;background:var(--line)}
+  h1{
+    font-size:clamp(28px,7vw,44px);line-height:1.15;margin:0 0 14px;
+    font-weight:500;letter-spacing:-.01em;text-wrap:balance;
+  }
+  p{color:var(--ink-2);margin:0 0 30px;max-width:52ch}
+  .links{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;
+  }
+  .links a{
+    background:var(--bg);color:var(--ink);text-decoration:none;
+    padding:13px 15px;font-size:13.5px;display:flex;justify-content:space-between;
+    gap:10px;align-items:baseline;transition:background .15s ease,color .15s ease;
+  }
+  .links a span{color:var(--ink-3);font-size:11px}
+  .links a:hover,.links a:focus-visible{background:rgba(224,160,74,.12);color:var(--accent);outline:none}
+  .foot{margin-top:28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+  .foot a{color:inherit}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="code">Error 404</div>
+    <h1>That page isn&rsquo;t here.</h1>
+    <p>
+      The address may be mistyped, or the page may have moved since you saved it.
+      Everything that <em>is</em> here is listed below.
+    </p>
+
+    <nav class="links">
+      <a href="/">The Toolshed <span>all projects</span></a>
+      <a href="/heirloom-family-tree/">Heirloom <span>family tree</span></a>
+      <a href="/town-services/">Local Services <span>directory</span></a>
+      <a href="/fresher-jobs/">Fresher Jobs <span>openings</span></a>
+      <a href="/jee-neet-tips/">JEE &amp; NEET Tips <span>study aids</span></a>
+      <a href="/auction-booklet/">AuctionBook <span>booklet builder</span></a>
+      <a href="/tinted-nails/">Tinted Nails <span>press-on studio</span></a>
+      <a href="/People-Information/">Society Directory <span>residents</span></a>
+      <a href="/wa-number-extractor/">Contact Extractor <span>utility</span></a>
+      <a href="/Life-events/">Life Events <span>timeline</span></a>
+    </nav>
+
+    <div class="foot">Stunity Tech — by Prateek</div>
+  </main>
+</body>
+</html>

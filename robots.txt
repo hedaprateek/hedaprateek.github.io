@@ -1,0 +1,14 @@
+# hedaprateek.github.io
+# One robots.txt serves the whole origin: crawlers only read /robots.txt at the
+# domain root, so per-project copies under /<repo>/robots.txt would be ignored.
+
+User-agent: *
+Allow: /
+
+# Owner consoles, not content. These are working tools with no public value,
+# and indexing them only competes with the real pages.
+Disallow: /People-Information/admin.html
+Disallow: /People-Information/member-codes.html
+Disallow: /town-services/admin.html
+
+Sitemap: https://hedaprateek.github.io/sitemap.xml
