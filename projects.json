@@ -1,15 +1,6 @@
 {
-  "generatedAt": "2026-09-14T08:58:07.731Z",
+  "generatedAt": "2026-09-15T08:42:58.676Z",
   "projects": [
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "pushedAt": "2026-09-14T05:26:08Z"
-    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -17,7 +8,43 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-14T03:56:59Z"
+      "pushedAt": "2026-09-15T07:20:36Z"
+    },
+    {
+      "name": "Society Directory",
+      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/People-Information",
+      "live": "https://hedaprateek.github.io/People-Information/",
+      "status": "live",
+      "pushedAt": "2026-09-15T06:22:26Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "pushedAt": "2026-09-15T05:20:03Z"
+    },
+    {
+      "name": "Report Generator",
+      "description": "Turns raw data into a formatted, printable report.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/report-generator",
+      "live": "https://hedaprateek.github.io/report-generator/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:40:39Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:33:48Z"
     },
     {
       "name": "tinted-nails",
@@ -26,7 +53,52 @@
       "repo": "https://github.com/hedaprateek/tinted-nails",
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
-      "pushedAt": "2026-09-13T19:39:28Z"
+      "pushedAt": "2026-09-14T19:32:54Z"
+    },
+    {
+      "name": "AuctionBook",
+      "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
+      "stack": "HTML · JS",
+      "repo": "https://github.com/hedaprateek/auction-booklet",
+      "live": "https://hedaprateek.github.io/auction-booklet/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:32:50Z"
+    },
+    {
+      "name": "heirloom-family-tree",
+      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
+      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:32:46Z"
+    },
+    {
+      "name": "jee-neet-tips",
+      "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/jee-neet-tips",
+      "live": "https://hedaprateek.github.io/jee-neet-tips/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:32:38Z"
+    },
+    {
+      "name": "wa-number-extractor",
+      "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/wa-number-extractor",
+      "live": "https://hedaprateek.github.io/wa-number-extractor/",
+      "status": "live",
+      "pushedAt": "2026-09-14T19:32:34Z"
+    },
+    {
+      "name": "Life Events",
+      "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
+      "stack": "JS · Excel",
+      "repo": "https://github.com/hedaprateek/Life-events",
+      "live": null,
+      "status": "local",
+      "pushedAt": "2026-09-14T19:32:31Z"
     },
     {
       "name": "photo-print-layout",
@@ -47,69 +119,6 @@
       "pushedAt": "2026-09-13T17:09:24Z"
     },
     {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:43:33Z"
-    },
-    {
-      "name": "AuctionBook",
-      "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
-      "stack": "HTML · JS",
-      "repo": "https://github.com/hedaprateek/auction-booklet",
-      "live": "https://hedaprateek.github.io/auction-booklet/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:42:29Z"
-    },
-    {
-      "name": "heirloom-family-tree",
-      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
-      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:42:25Z"
-    },
-    {
-      "name": "Society Directory",
-      "description": "A housing society's committee, emergency numbers and resident list, read straight from one Excel file — no database behind it.",
-      "stack": "JS · Excel",
-      "repo": "https://github.com/hedaprateek/People-Information",
-      "live": "https://hedaprateek.github.io/People-Information/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:42:20Z"
-    },
-    {
-      "name": "jee-neet-tips",
-      "description": "Free mnemonics, calculation shortcuts and formula recall tables for JEE/NEET prep",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/jee-neet-tips",
-      "live": "https://hedaprateek.github.io/jee-neet-tips/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:41:32Z"
-    },
-    {
-      "name": "wa-number-extractor",
-      "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/wa-number-extractor",
-      "live": "https://hedaprateek.github.io/wa-number-extractor/",
-      "status": "live",
-      "pushedAt": "2026-09-13T16:41:28Z"
-    },
-    {
-      "name": "Life Events",
-      "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
-      "stack": "JS · Excel",
-      "repo": "https://github.com/hedaprateek/Life-events",
-      "live": null,
-      "status": "local",
-      "pushedAt": "2026-09-13T16:41:23Z"
-    },
-    {
       "name": "stunity-tech",
       "description": "Stunity Tech — Prateek Heda's software studio: websites, business tools, legacy UI revamps and fixes for everyday software problems.",
       "stack": "JavaScript",
@@ -126,15 +135,6 @@
       "live": "https://hedaprateek.github.io/solar-website/",
       "status": "live",
       "pushedAt": "2026-09-11T10:25:30Z"
-    },
-    {
-      "name": "Report Generator",
-      "description": "Turns raw data into a formatted, printable report.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/report-generator",
-      "live": "https://hedaprateek.github.io/report-generator/",
-      "status": "live",
-      "pushedAt": "2026-09-11T08:21:20Z"
     },
     {
       "name": "pardarshi",
@@ -231,21 +231,21 @@
     {
       "name": "Local Services & Help",
       "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v4",
-      "notes": "Apps — build 4",
-      "publishedAt": "2026-09-13T16:43:33Z",
+      "version": "apk-v5",
+      "notes": "Apps — build 5",
+      "publishedAt": "2026-09-14T19:33:48Z",
       "assets": [
         {
-          "name": "Local-Services-v4.apk",
+          "name": "Local-Services-v5.apk",
           "size": "400 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v4/Local-Services-v4.apk",
-          "downloads": 1
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v5/Local-Services-v5.apk",
+          "downloads": 0
         },
         {
-          "name": "Society-Directory-v4.apk",
+          "name": "Society-Directory-v5.apk",
           "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v4/Society-Directory-v4.apk",
-          "downloads": 1
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v5/Society-Directory-v5.apk",
+          "downloads": 0
         }
       ]
     }
