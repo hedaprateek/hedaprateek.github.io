@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T08:42:58.676Z",
+  "generatedAt": "2026-09-16T08:37:23.823Z",
   "projects": [
     {
       "name": "IPO Tracker",
@@ -8,7 +8,7 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-09-15T07:20:36Z"
+      "pushedAt": "2026-09-16T07:24:01Z"
     },
     {
       "name": "Society Directory",
@@ -17,7 +17,25 @@
       "repo": "https://github.com/hedaprateek/People-Information",
       "live": "https://hedaprateek.github.io/People-Information/",
       "status": "live",
-      "pushedAt": "2026-09-15T06:22:26Z"
+      "pushedAt": "2026-09-16T06:57:39Z"
+    },
+    {
+      "name": "heirloom-family-tree",
+      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
+      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
+      "status": "live",
+      "pushedAt": "2026-09-16T06:51:12Z"
+    },
+    {
+      "name": "tinted-nails",
+      "description": "Tinted Nails — hand-painted press-on nail studio. Single-file static site.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/tinted-nails",
+      "live": "https://hedaprateek.github.io/tinted-nails/",
+      "status": "live",
+      "pushedAt": "2026-09-16T06:43:09Z"
     },
     {
       "name": "fresher-jobs",
@@ -26,7 +44,16 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-09-15T05:20:03Z"
+      "pushedAt": "2026-09-16T05:14:55Z"
+    },
+    {
+      "name": "photo-print-layout",
+      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/photo-print-layout",
+      "live": "https://hedaprateek.github.io/photo-print-layout/",
+      "status": "live",
+      "pushedAt": "2026-09-15T13:20:15Z"
     },
     {
       "name": "Report Generator",
@@ -47,15 +74,6 @@
       "pushedAt": "2026-09-14T19:33:48Z"
     },
     {
-      "name": "tinted-nails",
-      "description": "Tinted Nails — hand-painted press-on nail studio. Single-file static site.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/tinted-nails",
-      "live": "https://hedaprateek.github.io/tinted-nails/",
-      "status": "live",
-      "pushedAt": "2026-09-14T19:32:54Z"
-    },
-    {
       "name": "AuctionBook",
       "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
       "stack": "HTML · JS",
@@ -63,15 +81,6 @@
       "live": "https://hedaprateek.github.io/auction-booklet/",
       "status": "live",
       "pushedAt": "2026-09-14T19:32:50Z"
-    },
-    {
-      "name": "heirloom-family-tree",
-      "description": "A family tree you build by hand and print as a poster. One self-contained HTML file.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/heirloom-family-tree",
-      "live": "https://hedaprateek.github.io/heirloom-family-tree/",
-      "status": "live",
-      "pushedAt": "2026-09-14T19:32:46Z"
     },
     {
       "name": "jee-neet-tips",
@@ -99,15 +108,6 @@
       "live": null,
       "status": "local",
       "pushedAt": "2026-09-14T19:32:31Z"
-    },
-    {
-      "name": "photo-print-layout",
-      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/photo-print-layout",
-      "live": "https://hedaprateek.github.io/photo-print-layout/",
-      "status": "live",
-      "pushedAt": "2026-09-13T19:19:42Z"
     },
     {
       "name": "cctv-services-site",
