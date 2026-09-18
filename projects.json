@@ -1,6 +1,42 @@
 {
-  "generatedAt": "2026-09-17T08:41:30.693Z",
+  "generatedAt": "2026-09-18T08:17:03.901Z",
   "projects": [
+    {
+      "name": "pardarshi",
+      "description": "A demonstration of end-to-end public fund transparency for India: every rupee traced from taxpayer to last mile, with acknowledgements, a 1% deviation rule, and public show-cause notices. All data synthetic.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/pardarshi",
+      "live": "https://hedaprateek.github.io/pardarshi/",
+      "status": "live",
+      "pushedAt": "2026-09-18T08:04:45Z"
+    },
+    {
+      "name": "photo-print-layout",
+      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/photo-print-layout",
+      "live": "https://hedaprateek.github.io/photo-print-layout/",
+      "status": "live",
+      "pushedAt": "2026-09-18T07:27:34Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "pushedAt": "2026-09-18T05:10:55Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-09-18T04:23:19Z"
+    },
     {
       "name": "Campus to Corporate",
       "description": "A ready-to-run two-day workshop for final-year students — session decks, facilitator guide and handouts behind one landing page.",
@@ -27,15 +63,6 @@
       "live": "https://hedaprateek.github.io/People-Information/",
       "status": "live",
       "pushedAt": "2026-09-17T07:48:01Z"
-    },
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "pushedAt": "2026-09-17T07:47:59Z"
     },
     {
       "name": "tinted-nails",
@@ -92,15 +119,6 @@
       "pushedAt": "2026-09-17T07:39:00Z"
     },
     {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "pushedAt": "2026-09-17T03:53:31Z"
-    },
-    {
       "name": "stunity-tech",
       "description": "Stunity Tech — Prateek Heda's software studio: websites, business tools, legacy UI revamps and fixes for everyday software problems.",
       "stack": "JavaScript",
@@ -108,24 +126,6 @@
       "live": "https://hedaprateek.github.io/stunity-tech/",
       "status": "live",
       "pushedAt": "2026-09-16T11:59:44Z"
-    },
-    {
-      "name": "pardarshi",
-      "description": "A demonstration of end-to-end public fund transparency for India: every rupee traced from taxpayer to last mile, with acknowledgements, a 1% deviation rule, and public show-cause notices. All data synthetic.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/pardarshi",
-      "live": "https://hedaprateek.github.io/pardarshi/",
-      "status": "live",
-      "pushedAt": "2026-09-16T11:44:08Z"
-    },
-    {
-      "name": "photo-print-layout",
-      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/photo-print-layout",
-      "live": "https://hedaprateek.github.io/photo-print-layout/",
-      "status": "live",
-      "pushedAt": "2026-09-15T13:20:15Z"
     },
     {
       "name": "Report Generator",
