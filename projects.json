@@ -1,15 +1,6 @@
 {
-  "generatedAt": "2026-10-07T10:18:26.957Z",
+  "generatedAt": "2026-10-08T10:38:27.142Z",
   "projects": [
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "pushedAt": "2026-10-07T06:55:46Z"
-    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -17,7 +8,16 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-10-07T06:26:52Z"
+      "pushedAt": "2026-10-08T06:38:17Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "pushedAt": "2026-10-08T06:29:58Z"
     },
     {
       "name": "photo-print-layout",
@@ -248,13 +248,13 @@
           "name": "Local-Services-v6.apk",
           "size": "400 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Local-Services-v6.apk",
-          "downloads": 2
+          "downloads": 4
         },
         {
           "name": "Society-Directory-v6.apk",
           "size": "366 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Society-Directory-v6.apk",
-          "downloads": 1
+          "downloads": 3
         }
       ]
     }
