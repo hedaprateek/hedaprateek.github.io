@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-10-08T10:38:27.142Z",
+  "generatedAt": "2026-10-09T10:36:45.954Z",
   "projects": [
+    {
+      "name": "kalanagarcha-mahaganapati",
+      "description": "Kalanagarcha Mahaganapati",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/kalanagarcha-mahaganapati",
+      "live": "https://hedaprateek.github.io/kalanagarcha-mahaganapati/",
+      "status": "live",
+      "pushedAt": "2026-10-09T08:00:36Z"
+    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -8,7 +17,7 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-10-08T06:38:17Z"
+      "pushedAt": "2026-10-09T06:40:59Z"
     },
     {
       "name": "IPO Tracker",
@@ -17,7 +26,16 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-10-08T06:29:58Z"
+      "pushedAt": "2026-10-09T06:31:00Z"
+    },
+    {
+      "name": "business-growth-coach",
+      "description": "Umesh Sharda — business growth coaching, strategy, systems and support. A lightweight website with WhatsApp enquiries.",
+      "stack": "CSS",
+      "repo": "https://github.com/hedaprateek/business-growth-coach",
+      "live": "https://hedaprateek.github.io/business-growth-coach/",
+      "status": "live",
+      "pushedAt": "2026-10-08T16:12:38Z"
     },
     {
       "name": "photo-print-layout",
