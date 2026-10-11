@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T09:53:14.385Z",
+  "generatedAt": "2026-10-11T10:02:46.484Z",
   "projects": [
     {
       "name": "fresher-jobs",
@@ -8,7 +8,7 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-10-10T06:22:37Z"
+      "pushedAt": "2026-10-11T06:25:30Z"
     },
     {
       "name": "IPO Tracker",
@@ -17,7 +17,16 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-10-10T04:48:24Z"
+      "pushedAt": "2026-10-11T04:34:05Z"
+    },
+    {
+      "name": "rivaans-ichalkaranji",
+      "description": "Rivaan’s pure vegetarian multicuisine restaurant in Ichalkaranji, with a local editor and publishing workflow.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/rivaans-ichalkaranji",
+      "live": "https://hedaprateek.github.io/rivaans-ichalkaranji/",
+      "status": "live",
+      "pushedAt": "2026-10-10T15:16:39Z"
     },
     {
       "name": "kalanagarcha-mahaganapati",
@@ -186,8 +195,8 @@
       "description": "Paste Instagram/YouTube/TikTok links, get the audio back as tagged MP3s. Local web app + CLI.",
       "stack": "JavaScript",
       "repo": "https://github.com/hedaprateek/reel-audio",
-      "live": "https://hedaprateek.github.io/reel-audio/",
-      "status": "live",
+      "live": null,
+      "status": "source",
       "pushedAt": "2026-09-06T19:02:46Z"
     },
     {
