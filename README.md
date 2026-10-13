@@ -6,6 +6,10 @@ published at **https://hedaprateek.github.io/**.
 There is no build step for the page itself — `index.html` reads `projects.json` at
 load time and renders the cards.
 
+Search at the top filters names, descriptions, technologies and download filenames
+as you type. Results stay in three sections: **Live websites**, **App downloads**
+and **Unpublished projects**. Clear the search to show everything again.
+
 ## How the list stays current
 
 A GitHub Action (`.github/workflows/update-projects.yml`) runs `scripts/build-projects.mjs`
@@ -34,12 +38,12 @@ entry to `overrides.json` keyed by the exact repo name:
 }
 ```
 
-Use `"status": "local"` only for something that's genuinely never going to have a
-live page by design (e.g. it's meant to run on someone's own machine). Don't set
-`"status": "source"` as a way to skip the live-page check for a repo that's
-currently backend/full-stack — that disables live-detection for it *permanently*,
-so it'll stay marked "Source" even if you add a GitHub Pages demo for it later.
-Just leave `status` out and let auto-detection decide every run.
+Live detection checks an override URL, the repository's homepage and its GitHub
+Pages address. A working website always shows **Live**, even if an old override
+said `local` or `source`. A broken `live` override cannot force a Live label.
+Repositories without a live website appear under **Unpublished projects**, unless
+they have downloadable releases or `"category": "download"` in their override.
+The latter keeps a software project in downloads while its first build is pending.
 
 Commit the change and push — the workflow also runs on any push that touches
 `overrides.json`, so the site picks it up within a minute or two.
@@ -49,7 +53,14 @@ Commit the change and push — the workflow also runs on any push that touches
 Any repo with a published GitHub Release that has files attached shows up
 automatically in the Downloads section, with a button per asset. Nothing to
 configure — publish a Release with binaries on any repo and it appears on the
-next run. The section stays hidden entirely while no repo has any releases.
+next run. Android `.apk` files and Windows `.exe`/Windows ZIP files have separate
+platform labels. PC Cleaner is Windows software, not an APK: extract its portable
+ZIP and run `PC Companion.exe`. Software with no live website appears only under
+App downloads. Websites with an APK can appear in both the live and downloads sections.
+The updater chooses the newest stable release with uploaded files and excludes
+drafts and prereleases. Private repositories never appear in the public catalogue.
+
+Run classification checks with `node --test tests/catalog.test.mjs`.
 
 ## Getting the site to pick up changes right now
 

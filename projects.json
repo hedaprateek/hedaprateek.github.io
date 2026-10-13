@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-10-12T10:53:53.695Z",
+  "generatedAt": "2026-10-13T07:12:36.032Z",
   "projects": [
+    {
+      "name": "PC Cleaner",
+      "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
+      "stack": "Windows · C# · .NET",
+      "repo": "https://github.com/hedaprateek/pc-cleaner",
+      "live": null,
+      "status": "source",
+      "category": "download",
+      "pushedAt": "2026-10-13T07:10:40Z"
+    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -8,7 +18,8 @@
       "repo": "https://github.com/hedaprateek/fresher-jobs",
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
-      "pushedAt": "2026-10-12T06:30:25Z"
+      "category": "live",
+      "pushedAt": "2026-10-13T07:05:41Z"
     },
     {
       "name": "IPO Tracker",
@@ -17,43 +28,18 @@
       "repo": "https://github.com/hedaprateek/ipo-tracker",
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
-      "pushedAt": "2026-10-12T06:20:12Z"
-    },
-    {
-      "name": "rivaans-ichalkaranji",
-      "description": "Rivaan’s pure vegetarian multicuisine restaurant in Ichalkaranji, with a local editor and publishing workflow.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/rivaans-ichalkaranji",
-      "live": "https://hedaprateek.github.io/rivaans-ichalkaranji/",
-      "status": "live",
-      "pushedAt": "2026-10-10T15:16:39Z"
-    },
-    {
-      "name": "kalanagarcha-mahaganapati",
-      "description": "Kalanagarcha Mahaganapati",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/kalanagarcha-mahaganapati",
-      "live": "https://hedaprateek.github.io/kalanagarcha-mahaganapati/",
-      "status": "live",
-      "pushedAt": "2026-10-09T08:00:36Z"
+      "category": "live",
+      "pushedAt": "2026-10-13T03:23:17Z"
     },
     {
       "name": "business-growth-coach",
       "description": "Umesh Sharda — business growth coaching, strategy, systems and support. A lightweight website with WhatsApp enquiries.",
-      "stack": "CSS",
+      "stack": "JavaScript",
       "repo": "https://github.com/hedaprateek/business-growth-coach",
       "live": "https://hedaprateek.github.io/business-growth-coach/",
       "status": "live",
-      "pushedAt": "2026-10-08T16:12:38Z"
-    },
-    {
-      "name": "photo-print-layout",
-      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/photo-print-layout",
-      "live": "https://hedaprateek.github.io/photo-print-layout/",
-      "status": "live",
-      "pushedAt": "2026-09-19T05:07:36Z"
+      "category": "live",
+      "pushedAt": "2026-10-12T12:53:13Z"
     },
     {
       "name": "heirloom-family-tree",
@@ -62,15 +48,47 @@
       "repo": "https://github.com/hedaprateek/heirloom-family-tree",
       "live": "https://hedaprateek.github.io/heirloom-family-tree/",
       "status": "live",
-      "pushedAt": "2026-09-18T12:04:42Z"
+      "category": "live",
+      "pushedAt": "2026-10-12T12:49:52Z"
+    },
+    {
+      "name": "rivaans-ichalkaranji",
+      "description": "Rivaan’s pure vegetarian multicuisine restaurant in Ichalkaranji, with a local editor and publishing workflow.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/rivaans-ichalkaranji",
+      "live": "https://hedaprateek.github.io/rivaans-ichalkaranji/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-12T12:46:32Z"
+    },
+    {
+      "name": "kalanagarcha-mahaganapati",
+      "description": "Kalanagarcha Mahaganapati",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/kalanagarcha-mahaganapati",
+      "live": "https://hedaprateek.github.io/kalanagarcha-mahaganapati/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-09T08:00:36Z"
+    },
+    {
+      "name": "photo-print-layout",
+      "description": "Arrange any number of photos onto A3, A4, 4x6 or identity-size sheets with the least wasted paper, enhance them for print, then print or save a PDF. Runs entirely in the browser.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/photo-print-layout",
+      "live": "https://hedaprateek.github.io/photo-print-layout/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-09-19T05:07:36Z"
     },
     {
       "name": "driving-school-website",
       "description": "Website for a car driving school and RTO services: fixed-price courses with a plan builder, searchable RTO services with document checklists, and a free learner's licence mock test.",
       "stack": "JavaScript",
       "repo": "https://github.com/hedaprateek/driving-school-website",
-      "live": "https://hedaprateek.github.io/driving-school-website/",
-      "status": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-18T09:12:30Z"
     },
     {
@@ -78,8 +96,9 @@
       "description": "Website for a solar panel sales & services business: survey, fabrication, installation, inverters, quotes and contact",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/solar-website",
-      "live": "https://hedaprateek.github.io/solar-website/",
-      "status": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-18T09:06:24Z"
     },
     {
@@ -87,8 +106,9 @@
       "description": "A demonstration of end-to-end public fund transparency for India: every rupee traced from taxpayer to last mile, with acknowledgements, a 1% deviation rule, and public show-cause notices. All data synthetic.",
       "stack": "JavaScript",
       "repo": "https://github.com/hedaprateek/pardarshi",
-      "live": "https://hedaprateek.github.io/pardarshi/",
-      "status": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-18T08:04:45Z"
     },
     {
@@ -98,6 +118,7 @@
       "repo": "https://github.com/hedaprateek/campus-to-corporate",
       "live": "https://hedaprateek.github.io/campus-to-corporate/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:59:23Z"
     },
     {
@@ -107,6 +128,7 @@
       "repo": "https://github.com/hedaprateek/town-services",
       "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:48:56Z"
     },
     {
@@ -116,6 +138,7 @@
       "repo": "https://github.com/hedaprateek/People-Information",
       "live": "https://hedaprateek.github.io/People-Information/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:48:01Z"
     },
     {
@@ -125,6 +148,7 @@
       "repo": "https://github.com/hedaprateek/tinted-nails",
       "live": "https://hedaprateek.github.io/tinted-nails/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:47:52Z"
     },
     {
@@ -134,6 +158,7 @@
       "repo": "https://github.com/hedaprateek/jee-neet-tips",
       "live": "https://hedaprateek.github.io/jee-neet-tips/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:47:32Z"
     },
     {
@@ -141,8 +166,9 @@
       "description": "Paste a WhatsApp chat export, get every unique phone number it mentions, deduplicated with counts. Client-side only.",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/wa-number-extractor",
-      "live": "https://hedaprateek.github.io/wa-number-extractor/",
-      "status": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-17T07:47:28Z"
     },
     {
@@ -150,8 +176,9 @@
       "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
       "stack": "JS · Excel",
       "repo": "https://github.com/hedaprateek/Life-events",
-      "live": null,
-      "status": "local",
+      "live": "https://hedaprateek.github.io/Life-events/",
+      "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-17T07:47:25Z"
     },
     {
@@ -159,8 +186,9 @@
       "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
       "stack": "HTML · JS",
       "repo": "https://github.com/hedaprateek/auction-booklet",
-      "live": "https://hedaprateek.github.io/auction-booklet/",
-      "status": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-17T07:39:00Z"
     },
     {
@@ -170,6 +198,7 @@
       "repo": "https://github.com/hedaprateek/stunity-tech",
       "live": "https://hedaprateek.github.io/stunity-tech/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-16T11:59:44Z"
     },
     {
@@ -179,6 +208,7 @@
       "repo": "https://github.com/hedaprateek/report-generator",
       "live": "https://hedaprateek.github.io/report-generator/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-14T19:40:39Z"
     },
     {
@@ -188,6 +218,7 @@
       "repo": "https://github.com/hedaprateek/cctv-services-site",
       "live": "https://hedaprateek.github.io/cctv-services-site/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-09-13T17:09:24Z"
     },
     {
@@ -197,6 +228,7 @@
       "repo": "https://github.com/hedaprateek/reel-audio",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-06T19:02:46Z"
     },
     {
@@ -206,6 +238,7 @@
       "repo": "https://github.com/hedaprateek/shirt-store",
       "live": "https://hedaprateek.github.io/shirt-store/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-08-27T04:29:03Z"
     },
     {
@@ -215,6 +248,7 @@
       "repo": "https://github.com/hedaprateek/project-starter",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-08-25T16:55:03Z"
     },
     {
@@ -224,6 +258,7 @@
       "repo": "https://github.com/hedaprateek/event-helper",
       "live": "https://hedaprateek.github.io/event-helper/",
       "status": "live",
+      "category": "live",
       "pushedAt": "2026-08-25T04:08:42Z"
     },
     {
@@ -233,6 +268,7 @@
       "repo": "https://github.com/hedaprateek/ticket-watcher",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-08-15T10:33:13Z"
     },
     {
@@ -242,6 +278,7 @@
       "repo": "https://github.com/hedaprateek/OMR_generator",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-08-13T12:07:16Z"
     },
     {
@@ -251,6 +288,7 @@
       "repo": "https://github.com/hedaprateek/webdriverIO-Demo",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2024-07-24T11:19:31Z"
     },
     {
@@ -260,25 +298,50 @@
       "repo": "https://github.com/hedaprateek/warping-management",
       "live": null,
       "status": "source",
+      "category": "unpublished",
       "pushedAt": "2021-12-10T13:10:16Z"
     }
   ],
   "downloads": [
     {
+      "name": "PC Cleaner",
+      "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
+      "stack": "Windows · C# · .NET",
+      "repo": "https://github.com/hedaprateek/pc-cleaner",
+      "version": "v1.0.0",
+      "notes": "PC Cleaner 1.0.0 — Windows x64",
+      "publishedAt": "2026-10-13T07:10:41Z",
+      "releaseUrl": "https://github.com/hedaprateek/pc-cleaner/releases/tag/v1.0.0",
+      "assets": [
+        {
+          "name": "PC-Cleaner-win-x64.zip",
+          "platform": "Windows",
+          "size": "58 MB",
+          "url": "https://github.com/hedaprateek/pc-cleaner/releases/download/v1.0.0/PC-Cleaner-win-x64.zip",
+          "downloads": 0
+        }
+      ]
+    },
+    {
       "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
       "repo": "https://github.com/hedaprateek/town-services",
       "version": "apk-v6",
       "notes": "Apps — build 6",
       "publishedAt": "2026-09-17T07:48:57Z",
+      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v6",
       "assets": [
         {
           "name": "Local-Services-v6.apk",
+          "platform": "Android APK",
           "size": "400 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Local-Services-v6.apk",
           "downloads": 4
         },
         {
           "name": "Society-Directory-v6.apk",
+          "platform": "Android APK",
           "size": "366 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Society-Directory-v6.apk",
           "downloads": 3

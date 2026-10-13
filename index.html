@@ -384,6 +384,23 @@
   .download-name{ color:var(--ink); font-weight:600; }
   .download-item:hover .download-name{ color:var(--accent); }
   .download-meta{ flex:none; color:var(--ink-faint); white-space:nowrap; }
+  [hidden]{display:none!important}
+  .catalog-search{margin:0 0 36px}
+  .catalog-search label{display:block;font-weight:600;margin-bottom:10px}
+  .search-row{display:flex;gap:10px;align-items:stretch}
+  .search-row input{min-width:0;flex:1;background:var(--surface);color:var(--ink);
+    border:1px solid var(--hairline);border-radius:4px;padding:14px 16px;font:inherit}
+  .search-row button{border:1px solid var(--hairline);border-radius:4px;background:var(--surface-2);color:var(--ink);padding:10px 16px;font:inherit;cursor:pointer}
+  .search-row input:focus-visible,.search-row button:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .search-summary{color:var(--ink-dim);font-size:13px;margin:10px 0 0}
+  .catalog-section{margin-top:40px;padding-top:28px;border-top:1px solid var(--hairline)}
+  .section-count{font:500 13px "IBM Plex Mono",monospace;color:var(--ink-dim);vertical-align:middle;margin-left:12px}
+  .download-name{overflow-wrap:anywhere}
+  .download-item{flex-wrap:wrap}
+  .download-meta{font-size:11px}
+  .empty-results{padding:26px;border:1px dashed var(--hairline);color:var(--ink-dim)}
+  #catalog.is-filtering .card{animation:none;opacity:1;transform:none}
+  @media print{.catalog-search{display:none}.card{opacity:1;transform:none;animation:none;break-inside:avoid}}
 </style>
 
 <!-- ═══ Stunity Tech — studio credit (screen + print) ═══════════════════
@@ -526,20 +543,35 @@
     <p class="manifesto">Small, single-purpose tools, built one at a time and shipped. Most need <strong>nothing but a browser</strong> to run — no accounts, no server, often no build step at all.</p>
     <p class="legend">
       <span><i class="fill-live"></i> Live — open and use it now</span>
-      <span><i class="fill-local"></i> Local — runs on your own machine</span>
-      <span><i class="fill-source"></i> Source — code only, browse the repo</span>
+      <span><i class="fill-local"></i> Downloads — Android APKs and desktop software</span>
+      <span><i class="fill-source"></i> Unpublished — no live website yet</span>
     </p>
   </header>
 
-  <main class="grid" id="grid" aria-live="polite">
-    <p class="loading">Loading projects…</p>
+  <main id="catalog">
+    <div class="catalog-search" role="search">
+      <label for="project-search">Find a tool</label>
+      <div class="search-row"><input id="project-search" type="search" placeholder="Search names, descriptions, technologies or downloads…" autocomplete="off" aria-controls="live-section downloads-section unpublished-section">
+        <button type="button" id="clear-search" hidden>Clear</button></div>
+      <p class="search-summary" id="search-summary" role="status">Loading projects…</p>
+    </div>
+    <section class="catalog-section" id="live-section" aria-labelledby="live-heading">
+      <h2 class="section-heading" id="live-heading">Live websites <span class="section-count" id="live-count"></span></h2>
+      <p class="section-sub">Published and ready to use. Open a website to get started.</p>
+      <div class="grid" id="grid"><p class="loading">Loading projects…</p></div>
+    </section>
+    <section class="catalog-section" id="downloads-section" hidden aria-labelledby="downloads-heading">
+      <h2 class="section-heading" id="downloads-heading">App downloads <span class="section-count" id="downloads-count"></span></h2>
+      <p class="section-sub">Android APKs, Windows software and other downloadable builds. Choose the file for your device.</p>
+      <div class="grid" id="downloads-grid"></div>
+    </section>
+    <section class="catalog-section" id="unpublished-section" hidden aria-labelledby="unpublished-heading">
+      <h2 class="section-heading" id="unpublished-heading">Unpublished projects <span class="section-count" id="unpublished-count"></span></h2>
+      <p class="section-sub">Projects without a live website. Explore their source on GitHub.</p>
+      <div class="grid" id="unpublished-grid"></div>
+    </section>
+    <p class="empty-results" id="empty-results" hidden>No tools match your search. Try another name or clear the search.</p>
   </main>
-
-  <section class="downloads-section" id="downloads-section" hidden>
-    <h2 class="section-heading">Downloads</h2>
-    <p class="section-sub">Installable builds, pulled straight from each project's GitHub Releases.</p>
-    <div class="grid" id="downloads-grid"></div>
-  </section>
 
   <footer class="colophon">
     <span id="colophon-text">—</span>
@@ -591,7 +623,10 @@ var grid = document.getElementById('grid');
 var downloadsSection = document.getElementById('downloads-section');
 var downloadsGrid = document.getElementById('downloads-grid');
 var colophon = document.getElementById('colophon-text');
-var STATUS_LABEL = { live: 'Live', local: 'Local', source: 'Source' };
+var STATUS_LABEL = { live: 'Live', local: 'Local tool', source: 'Unpublished' };
+var catalogData = {projects:[],downloads:[]};
+var catalogLoaded = false;
+var catalogRendered = false;
 
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, function (c) {
@@ -608,12 +643,12 @@ function formatDate(iso) {
 }
 
 function cardHTML(p, i) {
-  var label = STATUS_LABEL[p.status] || 'Source';
+  var label = STATUS_LABEL[p.status] || 'Unpublished';
   var primaryUrl = (p.status === 'live' && p.live) ? p.live : p.repo;
   var links = (p.status === 'live' && p.live)
-    ? '<a class="link link--primary" href="' + p.live + '" target="_blank" rel="noopener">Open ↗</a>' +
-      '<a class="link" href="' + p.repo + '" target="_blank" rel="noopener">Source</a>'
-    : '<a class="link link--primary" href="' + p.repo + '" target="_blank" rel="noopener">Source ↗</a>';
+    ? '<a class="link link--primary" href="' + escapeHtml(p.live) + '" target="_blank" rel="noopener">Open ↗</a>' +
+      '<a class="link" href="' + escapeHtml(p.repo) + '" target="_blank" rel="noopener">Source</a>'
+    : '<a class="link link--primary" href="' + escapeHtml(p.repo) + '" target="_blank" rel="noopener">Source ↗</a>';
   links +=
     '<button type="button" class="link share-card-btn"' +
       ' data-url="' + escapeHtml(primaryUrl) + '"' +
@@ -622,7 +657,7 @@ function cardHTML(p, i) {
 
   return (
     '<article class="card" style="--i:' + i + '">' +
-      '<div class="card-top"><span class="tag tag--' + p.status + '">' + label + '</span>' +
+      '<div class="card-top"><span class="tag tag--' + escapeHtml(p.status) + '">' + label + '</span>' +
         '<span class="stack">' + escapeHtml(p.stack || '') + '</span></div>' +
       '<h2 class="card-title">' + escapeHtml(p.name) + '</h2>' +
       '<p class="card-desc">' + escapeHtml(p.description) + '</p>' +
@@ -636,7 +671,7 @@ function downloadCardHTML(d, i) {
     return (
       '<a class="download-item" href="' + escapeHtml(a.url) + '" target="_blank" rel="noopener">' +
         '<span class="download-name">' + escapeHtml(a.name) + '</span>' +
-        '<span class="download-meta">' + escapeHtml(a.size) + '</span>' +
+        '<span class="download-meta">' + escapeHtml(a.platform || downloadPlatform(a.name)) + ' · ' + escapeHtml(a.size) + '</span>' +
       '</a>'
     );
   }).join('');
@@ -644,16 +679,60 @@ function downloadCardHTML(d, i) {
   return (
     '<article class="card" style="--i:' + i + '">' +
       '<div class="card-top"><span class="tag tag--version">' + escapeHtml(d.version) + '</span>' +
-        '<span class="stack">' + formatDate(d.publishedAt) + '</span></div>' +
+        '<span class="stack">' + escapeHtml(d.publishedAt ? formatDate(d.publishedAt) : d.stack || '') + '</span></div>' +
       '<h2 class="card-title">' + escapeHtml(d.name) + '</h2>' +
-      '<p class="card-desc">' + escapeHtml(d.notes) + '</p>' +
-      '<div class="download-list">' + assets + '</div>' +
+      '<p class="card-desc">' + escapeHtml(d.description || d.notes) + '</p>' +
+      '<div class="download-list">' + (assets || '<span class="search-summary">Download coming soon — no build published yet.</span>') + '</div>' +
       '<div class="card-links">' +
         '<a class="link" href="' + escapeHtml(d.repo) + '" target="_blank" rel="noopener">Source</a>' +
       '</div>' +
     '</article>'
   );
 }
+
+function downloadPlatform(name){
+  if(/\.apk$/i.test(name))return 'Android APK';
+  if(/\.(exe|msi|msix)$/i.test(name) || /win(?:dows)?[-_. ]?(x64|arm64)|win-x64/i.test(name))return 'Windows';
+  if(/\.ipa$/i.test(name))return 'iPhone / iPad';
+  if(/\.(dmg|pkg)$/i.test(name))return 'macOS';
+  return 'Archive / installer';
+}
+function matchesSearch(item, query){
+  var text = [item.name,item.description,item.stack,item.repo,item.notes,item.version]
+    .concat((item.assets || []).map(function(a){return a.name + ' ' + (a.platform || downloadPlatform(a.name));}))
+    .join(' ').normalize('NFKC').toLocaleLowerCase();
+  return query.split(/\s+/).every(function(word){return text.indexOf(word) !== -1;});
+}
+function renderCatalog(){
+  if(!catalogLoaded)return;
+  var query = document.getElementById('project-search').value.trim().normalize('NFKC').toLocaleLowerCase();
+  document.getElementById('catalog').classList.toggle('is-filtering',!!query || catalogRendered);
+  catalogRendered = true;
+  var allDownloads = catalogData.downloads || [];
+  var downloads = allDownloads.filter(function(item){return matchesSearch(item,query);});
+  var downloadRepos = new Set(allDownloads.map(function(item){return item.repo;}));
+  var projects = catalogData.projects || [];
+  var live = projects.filter(function(item){return item.status === 'live' && item.live && matchesSearch(item,query);});
+  var unpublished = projects.filter(function(item){
+    return !(item.status === 'live' && item.live) && item.category !== 'download' && !downloadRepos.has(item.repo) && matchesSearch(item,query);
+  });
+  grid.innerHTML = live.map(cardHTML).join('');
+  downloadsGrid.innerHTML = downloads.map(downloadCardHTML).join('');
+  document.getElementById('unpublished-grid').innerHTML = unpublished.map(cardHTML).join('');
+  document.getElementById('live-section').hidden = !live.length;
+  downloadsSection.hidden = !downloads.length;
+  document.getElementById('unpublished-section').hidden = !unpublished.length;
+  document.getElementById('live-count').textContent = live.length;
+  document.getElementById('downloads-count').textContent = downloads.length;
+  document.getElementById('unpublished-count').textContent = unpublished.length;
+  document.getElementById('clear-search').hidden = !query;
+  document.getElementById('empty-results').hidden = live.length + downloads.length + unpublished.length > 0;
+  document.getElementById('search-summary').textContent = live.length + ' live websites · ' + downloads.length + ' downloads · ' + unpublished.length + ' unpublished projects';
+}
+document.getElementById('project-search').addEventListener('input',renderCatalog);
+document.getElementById('clear-search').addEventListener('click',function(){
+  document.getElementById('project-search').value='';renderCatalog();document.getElementById('project-search').focus();
+});
 
 async function loadProjects() {
   try {
@@ -663,26 +742,23 @@ async function loadProjects() {
     var projects = data.projects || [];
     var downloads = data.downloads || [];
 
-    grid.innerHTML = projects.map(cardHTML).join('');
+    catalogData = {projects:projects,downloads:downloads};
+    catalogLoaded = true;
+    renderCatalog();
     colophon.textContent = projects.length + ' project' + (projects.length === 1 ? '' : 's') +
       ' · auto-updated ' + formatDate(data.generatedAt);
 
-    if (downloads.length) {
-      downloadsGrid.innerHTML = downloads.map(downloadCardHTML).join('');
-      downloadsSection.hidden = false;
-    } else {
-      downloadsSection.hidden = true;
-    }
   } catch (err) {
     grid.innerHTML =
       '<p class="loading">Couldn\'t load the project list right now — ' +
       '<a class="link" href="https://github.com/hedaprateek?tab=repositories" target="_blank" rel="noopener">browse repositories directly ↗</a></p>';
     colophon.textContent = 'load failed';
+    document.getElementById('search-summary').textContent = 'The project list could not be loaded. Please try again.';
     console.error(err);
   }
 }
 
-grid.addEventListener('click', function (e) {
+document.getElementById('catalog').addEventListener('click', function (e) {
   var btn = e.target.closest('.share-card-btn');
   if (!btn) return;
   shareLink(btn.dataset.url, btn.dataset.title, btn.dataset.desc, btn);

@@ -5,6 +5,7 @@
 
 import { writeFile, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 
 const USERNAME = 'hedaprateek';
 const HOMEPAGE_REPO = `${USERNAME}.github.io`;
@@ -17,10 +18,20 @@ const headers = {
 };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 
+async function fetchWithRetry(url, options = {}){
+  for(let attempt=0;attempt<3;attempt++){
+    try {
+      const response = await fetch(url,{...options,signal:AbortSignal.timeout(15000)});
+      if(![429,500,502,503,504].includes(response.status) || attempt === 2)return response;
+    } catch(error){if(attempt === 2)throw error;}
+    await new Promise(resolve=>setTimeout(resolve,1000));
+  }
+}
+
 async function fetchAllRepos() {
   const repos = [];
   for (let page = 1; ; page++) {
-    const res = await fetch(
+    const res = await fetchWithRetry(
       `https://api.github.com/users/${USERNAME}/repos?per_page=100&page=${page}&sort=pushed`,
       { headers }
     );
@@ -31,17 +42,21 @@ async function fetchAllRepos() {
   }
   // Forks aren't this person's original work; empty repos have nothing to show yet;
   // the homepage repo itself shouldn't list itself as a project.
-  return repos.filter((r) => !r.fork && r.size > 0 && r.name !== HOMEPAGE_REPO);
+  return repos.filter((r) => !r.private && !r.fork && r.size > 0 && r.name !== HOMEPAGE_REPO);
 }
 
-async function detectLive(repoName) {
-  const url = `https://${USERNAME}.github.io/${repoName}/`;
-  try {
-    const res = await fetch(url, { method: 'HEAD', redirect: 'follow' });
-    return res.ok ? url : null;
-  } catch {
-    return null;
+export async function detectLive(repo, override = {}, request = fetchWithRetry) {
+  const candidates = [override.live, repo.homepage, `https://${USERNAME}.github.io/${repo.name}/`];
+  for(const candidate of [...new Set(candidates.filter(Boolean))]){
+    let url;
+    try {url = new URL(candidate);} catch {continue;}
+    if(!['http:', 'https:'].includes(url.protocol) || ['github.com','api.github.com'].includes(url.hostname)) continue;
+    try {
+      const res = await request(url.href, {method:'HEAD',redirect:'follow',signal:AbortSignal.timeout(15000)});
+      if(res.ok) return url.href;
+    } catch { /* try the next published address */ }
   }
+  return null;
 }
 
 async function loadOverrides() {
@@ -66,21 +81,33 @@ function formatBytes(bytes) {
 
 // Any repo with a published, non-draft release that has downloadable assets
 // attached becomes a Downloads entry — no manual step needed to list an app.
-async function fetchLatestRelease(repoName) {
-  const res = await fetch(
-    `https://api.github.com/repos/${USERNAME}/${repoName}/releases?per_page=1`,
-    { headers }
+export function assetPlatform(name){
+  if(/\.apk$/i.test(name))return 'Android APK';
+  if(/\.(exe|msi|msix)$/i.test(name) || /win(?:dows)?[-_. ]?(x64|arm64)|win-x64/i.test(name))return 'Windows';
+  if(/\.ipa$/i.test(name))return 'iPhone / iPad';
+  if(/\.(dmg|pkg)$/i.test(name))return 'macOS';
+  if(/\.(AppImage|deb|rpm)$/i.test(name))return 'Linux';
+  return 'Archive / installer';
+}
+export async function fetchLatestRelease(repoName, request = fetchWithRetry) {
+  const res = await request(
+    `https://api.github.com/repos/${USERNAME}/${repoName}/releases?per_page=20`,
+    { headers, signal:AbortSignal.timeout(15000) }
   );
-  if (!res.ok) return null;
-  const [release] = await res.json();
-  if (!release || release.draft || !release.assets?.length) return null;
+  if(res.status === 404)return null;
+  if(!res.ok)throw new Error(`Could not check releases for ${repoName}: GitHub ${res.status}`);
+  const releases = await res.json();
+  const release = releases.find(item => !item.draft && !item.prerelease && item.assets?.some(a => a.state === 'uploaded' || !a.state));
+  if(!release)return null;
 
   return {
     version: release.tag_name,
     notes: release.name || release.tag_name,
     publishedAt: release.published_at,
-    assets: release.assets.map((a) => ({
+    releaseUrl: release.html_url,
+    assets: release.assets.filter(a => a.state === 'uploaded' || !a.state).map((a) => ({
       name: a.name,
+      platform: assetPlatform(a.name),
       size: formatBytes(a.size),
       url: a.browser_download_url,
       downloads: a.download_count,
@@ -88,19 +115,14 @@ async function fetchLatestRelease(repoName) {
   };
 }
 
-async function buildProject(repo, overrides) {
+export async function buildProject(repo, overrides, request = fetchWithRetry) {
   const o = overrides[repo.name] || {};
   if (o.hidden) return null;
 
-  let status = o.status;
-  let live = null;
-
-  if (status === 'live' || status === undefined) {
-    live = o.live !== undefined ? o.live : await detectLive(repo.name);
-    if (status === undefined) status = live ? 'live' : 'source';
-  }
-
-  const release = await fetchLatestRelease(repo.name);
+  // Even an old "local" override must not hide a website that has since gone live.
+  const [live, release] = await Promise.all([detectLive(repo,o,request),fetchLatestRelease(repo.name,request)]);
+  const status = live ? 'live' : o.status === 'local' ? 'local' : 'source';
+  const category = live ? 'live' : release || o.category === 'download' ? 'download' : 'unpublished';
 
   const project = {
     name: o.title || repo.name,
@@ -109,19 +131,22 @@ async function buildProject(repo, overrides) {
     repo: repo.html_url,
     live: status === 'live' ? live : null,
     status,
+    category,
     pushedAt: repo.pushed_at,
   };
 
-  const download = release && {
+  const download = (release || o.category === 'download') && {
     name: o.title || repo.name,
+    description: o.description || repo.description || '',
+    stack: o.stack || repo.language || '',
     repo: repo.html_url,
-    ...release,
+    ...(release || {version:'Build pending',notes:'No downloadable build has been published yet.',assets:[],publishedAt:null}),
   };
 
   return { project, download };
 }
 
-async function main() {
+export async function main() {
   const [repos, overrides] = await Promise.all([fetchAllRepos(), loadOverrides()]);
   const built = await Promise.all(repos.map((r) => buildProject(r, overrides)));
 
@@ -140,7 +165,6 @@ async function main() {
   console.log(`Wrote ${projects.length} projects and ${downloads.length} downloads to projects.json`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if(process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)){
+  main().catch((err) => {console.error(err);process.exitCode=1;});
+}

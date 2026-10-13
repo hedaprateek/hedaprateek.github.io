@@ -1,4 +1,10 @@
 {
+  "pc-cleaner": {
+    "title": "PC Cleaner",
+    "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
+    "stack": "Windows · C# · .NET",
+    "category": "download"
+  },
   "auction-booklet": {
     "title": "AuctionBook",
     "description": "Turns a player spreadsheet into a print-ready auction booklet — cover, team pages and player cards laid out however many-to-a-page you need.",
