@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T07:47:02.981Z",
+  "generatedAt": "2026-10-13T10:39:16.671Z",
   "projects": [
     {
       "name": "PC Cleaner",
@@ -9,16 +9,16 @@
       "live": null,
       "status": "source",
       "category": "download",
-      "pushedAt": "2026-10-13T07:10:40Z"
+      "pushedAt": "2026-10-13T10:34:48Z"
     },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "category": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-10-13T07:05:41Z"
     },
     {
@@ -36,9 +36,9 @@
       "description": "Umesh Sharda — business growth coaching, strategy, systems and support. A lightweight website with WhatsApp enquiries.",
       "stack": "JavaScript",
       "repo": "https://github.com/hedaprateek/business-growth-coach",
-      "live": "https://hedaprateek.github.io/business-growth-coach/",
-      "status": "live",
-      "category": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-10-12T12:53:13Z"
     },
     {
@@ -176,9 +176,9 @@
       "description": "Keeps a family's stories, tagged by who was there, with photos attached — exported to Excel and back in. Nothing ever leaves the machine.",
       "stack": "JS · Excel",
       "repo": "https://github.com/hedaprateek/Life-events",
-      "live": "https://hedaprateek.github.io/Life-events/",
-      "status": "live",
-      "category": "live",
+      "live": null,
+      "status": "local",
+      "category": "unpublished",
       "pushedAt": "2026-09-17T07:47:25Z"
     },
     {
@@ -216,9 +216,9 @@
       "description": "Single-page website for a CCTV installation, electrical fitting and computer service business",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/cctv-services-site",
-      "live": "https://hedaprateek.github.io/cctv-services-site/",
-      "status": "live",
-      "category": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-09-13T17:09:24Z"
     },
     {
@@ -236,9 +236,9 @@
       "description": "A brand site for a shirt label with the whole storefront already built in, kept switched off behind one flag until launch day.",
       "stack": "HTML · JS",
       "repo": "https://github.com/hedaprateek/shirt-store",
-      "live": "https://hedaprateek.github.io/shirt-store/",
-      "status": "live",
-      "category": "live",
+      "live": null,
+      "status": "source",
+      "category": "unpublished",
       "pushedAt": "2026-08-27T04:29:03Z"
     },
     {
@@ -318,7 +318,7 @@
           "platform": "Windows",
           "size": "58 MB",
           "url": "https://github.com/hedaprateek/pc-cleaner/releases/download/v1.0.0/PC-Cleaner-win-x64.zip",
-          "downloads": 0
+          "downloads": 1
         }
       ]
     },
