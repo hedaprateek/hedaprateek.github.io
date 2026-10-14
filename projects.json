@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-10-13T10:39:16.671Z",
+  "generatedAt": "2026-10-14T08:45:38.078Z",
   "projects": [
-    {
-      "name": "PC Cleaner",
-      "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
-      "stack": "Windows · C# · .NET",
-      "repo": "https://github.com/hedaprateek/pc-cleaner",
-      "live": null,
-      "status": "source",
-      "category": "download",
-      "pushedAt": "2026-10-13T10:34:48Z"
-    },
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": null,
-      "status": "source",
-      "category": "unpublished",
-      "pushedAt": "2026-10-13T07:05:41Z"
-    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -29,7 +9,37 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-13T03:23:17Z"
+      "pushedAt": "2026-10-14T07:55:18Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-14T05:22:11Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-13T13:12:00Z"
+    },
+    {
+      "name": "PC Cleaner",
+      "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
+      "stack": "Windows · C# · .NET",
+      "repo": "https://github.com/hedaprateek/pc-cleaner",
+      "live": null,
+      "status": "source",
+      "category": "download",
+      "pushedAt": "2026-10-13T10:50:59Z"
     },
     {
       "name": "business-growth-coach",
@@ -120,16 +130,6 @@
       "status": "live",
       "category": "live",
       "pushedAt": "2026-09-17T07:59:23Z"
-    },
-    {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-09-17T07:48:56Z"
     },
     {
       "name": "Society Directory",
@@ -304,46 +304,46 @@
   ],
   "downloads": [
     {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "version": "apk-v7",
+      "notes": "Apps — build 7",
+      "publishedAt": "2026-10-13T12:51:06Z",
+      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v7",
+      "assets": [
+        {
+          "name": "Local-Services-v7.apk",
+          "platform": "Android APK",
+          "size": "409 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v7/Local-Services-v7.apk",
+          "downloads": 0
+        },
+        {
+          "name": "Society-Directory-v7.apk",
+          "platform": "Android APK",
+          "size": "366 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v7/Society-Directory-v7.apk",
+          "downloads": 0
+        }
+      ]
+    },
+    {
       "name": "PC Cleaner",
       "description": "PC Companion for Windows: computer details, performance insights and conservative temporary-file cleanup. Scan and review files before cleaning.",
       "stack": "Windows · C# · .NET",
       "repo": "https://github.com/hedaprateek/pc-cleaner",
-      "version": "v1.0.0",
-      "notes": "PC Cleaner 1.0.0 — Windows x64",
-      "publishedAt": "2026-10-13T07:10:41Z",
-      "releaseUrl": "https://github.com/hedaprateek/pc-cleaner/releases/tag/v1.0.0",
+      "version": "v1.1.0",
+      "notes": "PC Cleaner v1.1.0 — Windows x64",
+      "publishedAt": "2026-10-13T10:51:00Z",
+      "releaseUrl": "https://github.com/hedaprateek/pc-cleaner/releases/tag/v1.1.0",
       "assets": [
         {
           "name": "PC-Cleaner-win-x64.zip",
           "platform": "Windows",
           "size": "58 MB",
-          "url": "https://github.com/hedaprateek/pc-cleaner/releases/download/v1.0.0/PC-Cleaner-win-x64.zip",
-          "downloads": 1
-        }
-      ]
-    },
-    {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v6",
-      "notes": "Apps — build 6",
-      "publishedAt": "2026-09-17T07:48:57Z",
-      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v6",
-      "assets": [
-        {
-          "name": "Local-Services-v6.apk",
-          "platform": "Android APK",
-          "size": "400 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Local-Services-v6.apk",
-          "downloads": 4
-        },
-        {
-          "name": "Society-Directory-v6.apk",
-          "platform": "Android APK",
-          "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v6/Society-Directory-v6.apk",
+          "url": "https://github.com/hedaprateek/pc-cleaner/releases/download/v1.1.0/PC-Cleaner-win-x64.zip",
           "downloads": 3
         }
       ]
