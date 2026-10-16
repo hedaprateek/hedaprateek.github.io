@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-15T08:20:10.202Z",
+  "generatedAt": "2026-10-16T08:13:11.865Z",
   "projects": [
     {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "name": "wedding-celebration",
+      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/wedding-celebration",
+      "live": "https://hedaprateek.github.io/wedding-celebration/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-15T05:10:29Z"
+      "pushedAt": "2026-10-16T06:48:57Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,7 +19,17 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-15T05:00:33Z"
+      "pushedAt": "2026-10-16T06:10:46Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-16T04:58:36Z"
     },
     {
       "name": "Local Services & Help",
@@ -29,7 +39,7 @@
       "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-13T13:12:00Z"
+      "pushedAt": "2026-10-16T04:29:11Z"
     },
     {
       "name": "PC Cleaner",
@@ -308,23 +318,23 @@
       "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v7",
-      "notes": "Apps — build 7",
-      "publishedAt": "2026-10-13T12:51:06Z",
-      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v7",
+      "version": "apk-v9",
+      "notes": "Apps — build 9",
+      "publishedAt": "2026-10-16T04:09:19Z",
+      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v9",
       "assets": [
         {
-          "name": "Local-Services-v7.apk",
+          "name": "Local-Services-v9.apk",
           "platform": "Android APK",
-          "size": "409 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v7/Local-Services-v7.apk",
+          "size": "413 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v9/Local-Services-v9.apk",
           "downloads": 0
         },
         {
-          "name": "Society-Directory-v7.apk",
+          "name": "Society-Directory-v9.apk",
           "platform": "Android APK",
           "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v7/Society-Directory-v7.apk",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v9/Society-Directory-v9.apk",
           "downloads": 0
         }
       ]
