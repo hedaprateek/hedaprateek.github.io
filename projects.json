@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-10-16T08:13:11.865Z",
+  "generatedAt": "2026-10-17T07:49:53.608Z",
   "projects": [
-    {
-      "name": "wedding-celebration",
-      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/wedding-celebration",
-      "live": "https://hedaprateek.github.io/wedding-celebration/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-16T06:48:57Z"
-    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -19,7 +9,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-16T06:10:46Z"
+      "pushedAt": "2026-10-17T05:56:47Z"
     },
     {
       "name": "fresher-jobs",
@@ -29,7 +19,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-16T04:58:36Z"
+      "pushedAt": "2026-10-17T04:58:29Z"
+    },
+    {
+      "name": "wedding-celebration",
+      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/wedding-celebration",
+      "live": "https://hedaprateek.github.io/wedding-celebration/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-16T06:48:57Z"
     },
     {
       "name": "Local Services & Help",
