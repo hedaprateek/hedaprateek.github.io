@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-10-17T07:49:53.608Z",
+  "generatedAt": "2026-10-18T08:04:03.682Z",
   "projects": [
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-17T05:56:47Z"
-    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -19,7 +9,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-17T04:58:29Z"
+      "pushedAt": "2026-10-18T05:06:55Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-18T03:29:18Z"
     },
     {
       "name": "wedding-celebration",
@@ -29,7 +29,7 @@
       "live": "https://hedaprateek.github.io/wedding-celebration/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-16T06:48:57Z"
+      "pushedAt": "2026-10-17T13:20:59Z"
     },
     {
       "name": "Local Services & Help",
