@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-19T08:56:08.430Z",
+  "generatedAt": "2026-10-20T08:35:09.417Z",
   "projects": [
     {
-      "name": "wedding-celebration",
-      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/wedding-celebration",
-      "live": "https://hedaprateek.github.io/wedding-celebration/",
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-19T07:59:03Z"
+      "pushedAt": "2026-10-20T05:43:36Z"
     },
     {
       "name": "fresher-jobs",
@@ -19,17 +19,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-19T05:18:27Z"
+      "pushedAt": "2026-10-20T05:15:53Z"
     },
     {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "name": "wedding-celebration",
+      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/wedding-celebration",
+      "live": "https://hedaprateek.github.io/wedding-celebration/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-19T03:40:48Z"
+      "pushedAt": "2026-10-19T07:59:03Z"
     },
     {
       "name": "Local Services & Help",
