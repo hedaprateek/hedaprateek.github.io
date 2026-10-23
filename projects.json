@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-22T08:39:04.421Z",
+  "generatedAt": "2026-10-23T08:34:52.734Z",
   "projects": [
     {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "name": "wedding-celebration",
+      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/wedding-celebration",
+      "live": "https://hedaprateek.github.io/wedding-celebration/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-22T05:20:32Z"
+      "pushedAt": "2026-10-23T07:09:55Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,17 +19,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-22T05:13:08Z"
-    },
-    {
-      "name": "wedding-celebration",
-      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/wedding-celebration",
-      "live": "https://hedaprateek.github.io/wedding-celebration/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-19T07:59:03Z"
+      "pushedAt": "2026-10-23T07:05:45Z"
     },
     {
       "name": "Local Services & Help",
@@ -39,7 +29,17 @@
       "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-16T04:29:11Z"
+      "pushedAt": "2026-10-23T07:01:00Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-23T05:20:37Z"
     },
     {
       "name": "PC Cleaner",
@@ -318,23 +318,23 @@
       "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
       "stack": "HTML",
       "repo": "https://github.com/hedaprateek/town-services",
-      "version": "apk-v9",
-      "notes": "Apps — build 9",
-      "publishedAt": "2026-10-16T04:09:19Z",
-      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v9",
+      "version": "apk-v11",
+      "notes": "Apps — build 11",
+      "publishedAt": "2026-10-23T07:01:00Z",
+      "releaseUrl": "https://github.com/hedaprateek/town-services/releases/tag/apk-v11",
       "assets": [
         {
-          "name": "Local-Services-v9.apk",
+          "name": "Local-Services-v11.apk",
           "platform": "Android APK",
-          "size": "413 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v9/Local-Services-v9.apk",
+          "size": "423 KB",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v11/Local-Services-v11.apk",
           "downloads": 0
         },
         {
-          "name": "Society-Directory-v9.apk",
+          "name": "Society-Directory-v11.apk",
           "platform": "Android APK",
           "size": "366 KB",
-          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v9/Society-Directory-v9.apk",
+          "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v11/Society-Directory-v11.apk",
           "downloads": 0
         }
       ]
