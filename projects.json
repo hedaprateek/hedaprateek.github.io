@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-10-23T08:34:52.734Z",
+  "generatedAt": "2026-10-24T08:10:02.109Z",
   "projects": [
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-24T05:00:57Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-24T03:40:22Z"
+    },
+    {
+      "name": "waypoint",
+      "description": "A static travel atlas for nearby stations, airports, connected journeys and smarter routes.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/waypoint",
+      "live": "https://hedaprateek.github.io/waypoint/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-23T17:09:03Z"
+    },
     {
       "name": "wedding-celebration",
       "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
@@ -12,16 +42,6 @@
       "pushedAt": "2026-10-23T07:09:55Z"
     },
     {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-23T07:05:45Z"
-    },
-    {
       "name": "Local Services & Help",
       "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
       "stack": "HTML",
@@ -30,16 +50,6 @@
       "status": "live",
       "category": "live",
       "pushedAt": "2026-10-23T07:01:00Z"
-    },
-    {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-23T05:20:37Z"
     },
     {
       "name": "PC Cleaner",
