@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T08:10:02.109Z",
+  "generatedAt": "2026-10-25T08:27:29.712Z",
   "projects": [
     {
       "name": "fresher-jobs",
@@ -9,7 +9,7 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-24T05:00:57Z"
+      "pushedAt": "2026-10-25T05:16:55Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,7 +19,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-24T03:40:22Z"
+      "pushedAt": "2026-10-25T05:06:12Z"
     },
     {
       "name": "waypoint",
