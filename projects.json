@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-10-26T08:58:41.731Z",
+  "generatedAt": "2026-10-27T09:02:28.940Z",
   "projects": [
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-26T06:45:56Z"
-    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -19,7 +9,27 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-10-26T05:16:28Z"
+      "pushedAt": "2026-10-27T05:34:54Z"
+    },
+    {
+      "name": "wedding-celebration",
+      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
+      "stack": "JavaScript",
+      "repo": "https://github.com/hedaprateek/wedding-celebration",
+      "live": "https://hedaprateek.github.io/wedding-celebration/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-27T04:22:56Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-10-27T04:04:58Z"
     },
     {
       "name": "waypoint",
@@ -30,16 +40,6 @@
       "status": "live",
       "category": "live",
       "pushedAt": "2026-10-23T17:09:03Z"
-    },
-    {
-      "name": "wedding-celebration",
-      "description": "Prerna’s colourful Marwari wedding invitation — celebrations, photo diary and a personal event planner.",
-      "stack": "JavaScript",
-      "repo": "https://github.com/hedaprateek/wedding-celebration",
-      "live": "https://hedaprateek.github.io/wedding-celebration/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-23T07:09:55Z"
     },
     {
       "name": "Local Services & Help",
