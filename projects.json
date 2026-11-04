@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-11-03T10:55:12.696Z",
+  "generatedAt": "2026-11-04T10:58:24.334Z",
   "projects": [
-    {
-      "name": "Report Generator",
-      "description": "Turns raw data into a formatted, printable report.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/report-generator",
-      "live": "https://hedaprateek.github.io/report-generator/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-11-03T10:31:09Z"
-    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -19,7 +9,7 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-03T07:13:57Z"
+      "pushedAt": "2026-11-04T06:57:55Z"
     },
     {
       "name": "IPO Tracker",
@@ -29,7 +19,17 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-03T03:39:44Z"
+      "pushedAt": "2026-11-04T06:53:19Z"
+    },
+    {
+      "name": "Report Generator",
+      "description": "Turns raw data into a formatted, printable report.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/report-generator",
+      "live": "https://hedaprateek.github.io/report-generator/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-11-03T10:31:09Z"
     },
     {
       "name": "wedding-celebration",
