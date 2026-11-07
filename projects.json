@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T10:56:12.863Z",
+  "generatedAt": "2026-11-07T10:14:38.842Z",
   "projects": [
     {
       "name": "fresher-jobs",
@@ -9,7 +9,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-06T07:23:03Z"
+      "pushedAt": "2026-11-07T06:35:16Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-11-07T05:00:26Z"
     },
     {
       "name": "Report Generator",
@@ -20,16 +30,6 @@
       "status": "live",
       "category": "live",
       "pushedAt": "2026-11-06T07:17:18Z"
-    },
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-11-06T03:33:48Z"
     },
     {
       "name": "wedding-celebration",
