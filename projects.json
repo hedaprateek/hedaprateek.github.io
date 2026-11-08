@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-07T10:14:38.842Z",
+  "generatedAt": "2026-11-08T10:26:10.204Z",
   "projects": [
     {
-      "name": "fresher-jobs",
-      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
       "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/fresher-jobs",
-      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-07T06:35:16Z"
+      "pushedAt": "2026-11-08T09:32:59Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,7 +19,17 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-07T05:00:26Z"
+      "pushedAt": "2026-11-08T07:46:33Z"
+    },
+    {
+      "name": "fresher-jobs",
+      "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/fresher-jobs",
+      "live": "https://hedaprateek.github.io/fresher-jobs/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-11-08T06:41:47Z"
     },
     {
       "name": "Report Generator",
@@ -29,7 +39,7 @@
       "live": "https://hedaprateek.github.io/report-generator/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-06T07:17:18Z"
+      "pushedAt": "2026-11-07T15:05:45Z"
     },
     {
       "name": "wedding-celebration",
@@ -50,16 +60,6 @@
       "status": "live",
       "category": "live",
       "pushedAt": "2026-10-23T17:09:03Z"
-    },
-    {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-10-23T07:01:00Z"
     },
     {
       "name": "PC Cleaner",
