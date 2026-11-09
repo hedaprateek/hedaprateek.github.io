@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-11-08T10:26:10.204Z",
+  "generatedAt": "2026-11-09T11:36:56.110Z",
   "projects": [
-    {
-      "name": "Local Services & Help",
-      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
-      "stack": "HTML",
-      "repo": "https://github.com/hedaprateek/town-services",
-      "live": "https://hedaprateek.github.io/town-services/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-11-08T09:32:59Z"
-    },
     {
       "name": "IPO Tracker",
       "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
@@ -19,7 +9,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-08T07:46:33Z"
+      "pushedAt": "2026-11-09T10:59:43Z"
     },
     {
       "name": "fresher-jobs",
@@ -29,7 +19,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-08T06:41:47Z"
+      "pushedAt": "2026-11-09T07:10:16Z"
+    },
+    {
+      "name": "Local Services & Help",
+      "description": "Call or WhatsApp the neighbourhood's plumbers and electricians straight from one page. No sign-in, no app.",
+      "stack": "HTML",
+      "repo": "https://github.com/hedaprateek/town-services",
+      "live": "https://hedaprateek.github.io/town-services/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-11-09T05:13:04Z"
     },
     {
       "name": "Report Generator",
