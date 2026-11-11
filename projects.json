@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T11:16:02.410Z",
+  "generatedAt": "2026-11-11T11:01:22.278Z",
   "projects": [
     {
       "name": "fresher-jobs",
@@ -9,7 +9,7 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-10T07:43:36Z"
+      "pushedAt": "2026-11-11T07:06:07Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,7 +19,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-10T03:43:22Z"
+      "pushedAt": "2026-11-11T06:59:08Z"
     },
     {
       "name": "Local Services & Help",
