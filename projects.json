@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-11-23T12:49:10.399Z",
+  "generatedAt": "2026-11-24T13:46:37.974Z",
   "projects": [
-    {
-      "name": "IPO Tracker",
-      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
-      "stack": "JS · GH Actions",
-      "repo": "https://github.com/hedaprateek/ipo-tracker",
-      "live": "https://hedaprateek.github.io/ipo-tracker/",
-      "status": "live",
-      "category": "live",
-      "pushedAt": "2026-11-23T12:14:19Z"
-    },
     {
       "name": "fresher-jobs",
       "description": "Entry-level and internship openings in India, read from each employer's own hiring system. No agents, no fees.",
@@ -19,7 +9,17 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-23T08:12:08Z"
+      "pushedAt": "2026-11-24T10:24:50Z"
+    },
+    {
+      "name": "IPO Tracker",
+      "description": "Open, upcoming and closed IPOs with a live GMP trend and an apply-or-avoid read on each issue, refreshed every 30 minutes.",
+      "stack": "JS · GH Actions",
+      "repo": "https://github.com/hedaprateek/ipo-tracker",
+      "live": "https://hedaprateek.github.io/ipo-tracker/",
+      "status": "live",
+      "category": "live",
+      "pushedAt": "2026-11-24T10:22:27Z"
     },
     {
       "name": "Local Services & Help",
