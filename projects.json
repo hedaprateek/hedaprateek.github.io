@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T12:38:54.813Z",
+  "generatedAt": "2026-11-27T12:25:57.978Z",
   "projects": [
     {
       "name": "fresher-jobs",
@@ -9,7 +9,7 @@
       "live": "https://hedaprateek.github.io/fresher-jobs/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-26T08:52:53Z"
+      "pushedAt": "2026-11-27T09:03:53Z"
     },
     {
       "name": "IPO Tracker",
@@ -19,7 +19,7 @@
       "live": "https://hedaprateek.github.io/ipo-tracker/",
       "status": "live",
       "category": "live",
-      "pushedAt": "2026-11-26T05:24:16Z"
+      "pushedAt": "2026-11-27T09:00:33Z"
     },
     {
       "name": "Local Services & Help",
@@ -338,14 +338,14 @@
           "platform": "Android APK",
           "size": "423 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v11/Local-Services-v11.apk",
-          "downloads": 0
+          "downloads": 1
         },
         {
           "name": "Society-Directory-v11.apk",
           "platform": "Android APK",
           "size": "366 KB",
           "url": "https://github.com/hedaprateek/town-services/releases/download/apk-v11/Society-Directory-v11.apk",
-          "downloads": 0
+          "downloads": 1
         }
       ]
     },
